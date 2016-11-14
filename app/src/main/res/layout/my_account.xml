@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:background="@color/white"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/rl_foorte"
+
+        android:id="@+id/scrollView2">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/main_rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ex_large_text_size"
+        >
+
+        <Utils.Boldtext
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+             android:text="MY PROFILE"
+            android:textSize="@dimen/my_account_screen_username_text_size"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/grey"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/main_txt_skip"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="@dimen/large_text_size"
+            android:layout_marginRight="@dimen/large_text_size"
+            android:gravity="center"
+            android:background="@drawable/search"
+            />
+        </LinearLayout>
+
+        </RelativeLayout>
+        <View
+            android:id="@+id/my_profile_view"
+            android:layout_below="@id/main_rl_top"
+            android:layout_height="0.7dp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:background="@color/counter_text_color">
+
+        </View>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_name_location"
+            android:layout_below="@id/my_profile_view"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+            <Utils.Boldtext
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:layout_centerHorizontal="true"
+                android:text="NITESH KUMAR"
+                android:textSize="@dimen/my_account_screen_username_text_size"
+                android:layout_marginTop="23dp"
+                android:textColor="@color/light_red"/>
+            <Utils.LightText
+                android:layout_below="@id/txt_name"
+                android:id="@+id/txt_account_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LONG BEECH DUBAI"
+                android:layout_centerHorizontal="true"
+                android:drawablePadding="@dimen/half_margin"
+                android:drawableLeft="@drawable/pin"
+                android:layout_marginTop="7dp"
+                android:textSize="@dimen/outletlistpage_txt_sub_name_txt_size"
+                android:textColor="@color/light_grey"/>
+            <RelativeLayout
+               android:id="@+id/rl_logout"
+                android:layout_centerInParent="true"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin15"
+                android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/my_profile_logout"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/logout"
+                android:layout_alignParentTop="true"
+                android:textSize="@dimen/outletlistpage_txt_sub_name_txt_size"
+                android:textColor="#C6151D"/>
+                </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_pro_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_below="@+id/rl_name_location">
+            <com.assan.CircleImageView
+                android:id="@+id/iv_my_pro_pic"
+                android:layout_width="180dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="-10dp"
+                android:layout_marginBottom="@dimen/extra_large_text_size"
+                android:layout_centerInParent="true"
+                android:src="@drawable/pro_pic"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_below="@id/iv_my_pro_pic"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true">
+
+
+                <Utils.Boldtext
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BADGE:  "
+                    android:textSize="@dimen/my_account_screen_username_text_size"
+                    android:textColor="#767676"/>
+                <Utils.Boldtext
+                    android:textSize="@dimen/my_account_screen_username_text_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="true"
+                    android:text="BEGINNER"
+                    android:textColor="#FBA51A"
+                    android:id="@+id/txt_begnner"
+                    />
+
+            </LinearLayout>
+            <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/edit"
+             android:layout_alignParentBottom="true"
+             android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/extra_large_text_size"
+              android:layout_alignParentEnd="true"
+             android:id="@+id/iv_edit" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/listorstore"
+            android:visibility="gone"
+            android:layout_below="@+id/rl_pro_pic">
+
+      <RelativeLayout
+    android:id="@+id/rl_review"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/activity_relative_hieght"
+    android:gravity="center"
+    android:background="#0072B1"
+   android:layout_marginTop="@dimen/large_text_size"
+   >
+
+    <ImageView
+
+        android:id="@+id/iv_my_ac_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_text_size"
+        android:layout_marginLeft="@dimen/large_text_size"
+        android:layout_marginBottom="@dimen/large_text_size"
+        android:layout_marginRight="@dimen/margin5"
+        android:src="@drawable/reviews"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin30"
+        android:layout_toRightOf="@+id/iv_my_ac_review">
+        <Utils.Boldtext
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REVIEWS"
+            android:textSize="@dimen/my_account_screen_bookmark_textsize"
+            android:textColor="@color/white"/>
+        <Utils.RegularText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent: Al Jaber Medical"
+            android:textSize="@dimen/small_text_size"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:id="@+id/text_review" />
+    </LinearLayout>
+    <Utils.RegularText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/extra_large_text_size"
+        android:textSize="@dimen/my_account_screen_username_bookmarkno_textsize"
+        android:textColor="@color/white"
+        android:id="@+id/txt_review_count" />
+</RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_bookmak"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_relative_hieght"
+            android:background="#A7B73A"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:layout_below="@+id/rl_review">
+
+            <ImageView
+                android:id="@+id/iv_my_ac_bookmark"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/large_text_size"
+                android:layout_marginLeft="@dimen/large_text_size"
+                android:layout_marginBottom="@dimen/large_text_size"
+                android:layout_marginRight="@dimen/margin5"
+                android:src="@drawable/bookmark_11"/>
+
+                <Utils.Boldtext
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                        android:text="BOOKMARKS"
+                    android:layout_marginTop="@dimen/margin30"
+                    android:layout_toRightOf="@+id/iv_my_ac_bookmark"
+                    android:textSize="@dimen/my_account_screen_bookmark_textsize"
+                    android:textColor="@color/white"/>
+
+            <Utils.RegularText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/extra_large_text_size"
+                android:textSize="@dimen/my_account_screen_username_bookmarkno_textsize"
+                android:textColor="@color/white"
+                android:id="@+id/txt_bookmark_count" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_stattistic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_relative_hieght"
+            android:background="#464557"
+            android:gravity="center"
+            android:layout_marginTop="1dp"
+            android:layout_below="@+id/rl_bookmak">
+
+            <ImageView
+                android:id="@+id/iv_my_ac_stattistic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/large_text_size"
+                android:layout_marginLeft="@dimen/large_text_size"
+                android:layout_marginBottom="@dimen/large_text_size"
+                android:layout_marginRight="@dimen/margin5"
+                android:src="@drawable/stats"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin30"
+                android:layout_toRightOf="@+id/iv_my_ac_stattistic">
+                <Utils.Boldtext
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="STATISTICS"
+                    android:textSize="@dimen/my_account_screen_bookmark_textsize"
+                    android:textColor="@color/white"/>
+                <Utils.RegularText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recent: Al Jaber Medical"
+                    android:textSize="@dimen/small_text_size"
+                    android:visibility="gone"
+                    android:textColor="@color/white"
+                    android:id="@+id/txt_statistics" />
+            </LinearLayout>
+            <Utils.RegularText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/extra_large_text_size"
+                android:textSize="@dimen/my_account_screen_username_bookmarkno_textsize"
+                android:textColor="@color/white"
+                android:id="@+id/txt_ststics_count" />
+        </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:layout_marginTop="70dp"
+            android:layout_below="@+id/listorstore"
+            android:id="@+id/manageaccount">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_height="120dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/ll_mng_cmpny"
+                    android:background="@color/lightred">
+                <Utils.Boldtext
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/managecompany"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/my_account_screent_managecompanytext_size"
+                    android:text="MANAGE COMPANY STORES"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@color/blue"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/ll_mng_store"
+                    android:layout_height="match_parent">
+            <Utils.Boldtext
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/managestore"
+                    android:gravity="center"
+                android:textSize="@dimen/my_account_screent_managecompanytext_size"
+                    android:textColor="@color/white"
+                    android:text="MANAGE ORDERS"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_height="120dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/ll_contact_admin"
+                    android:background="@color/green">
+                    <Utils.Boldtext
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/contactassanadmin"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/my_account_screent_managecompanytext_size"
+                        android:padding="5dp"
+                        android:text="CONTACT AASAAN ADMIN"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@color/gray_dark"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/ll_analystics"
+                    android:layout_height="match_parent">
+                    <Utils.Boldtext
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/analystics"
+                        android:gravity="center"
+                        android:textSize="@dimen/my_account_screent_managecompanytext_size"
+                        android:textColor="@color/white"
+                        android:text="ANALYSTICS"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_foorte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f1f1f1"
+            android:weightSum="1.0"
+            android:paddingTop="@dimen/half_margin"
+            android:paddingBottom="@dimen/half_margin"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_home"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_home"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/home_icon"/>
+                <ImageView
+                    android:id="@+id/btn_home_active"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/home_icon_activer"/>
+                <Utils.LightText
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:id="@+id/txt_home"
+                    android:layout_gravity="center"
+                    android:text="@string/home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_categorie"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/small_text_size"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_cat"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_categories_hight"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/categories_icon"/>
+                <ImageView
+                    android:id="@+id/btn_cat_active"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_categories_hight"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/categories_icon_active"/>
+                <Utils.LightText
+                    android:layout_marginTop="@dimen/tablayout_icons_categories_pading"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:id="@+id/txt_category"
+                    android:layout_gravity="center"
+                    android:text="@string/category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bookmark"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/small_text_size"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_bookmark"
+                    android:layout_width="@dimen/tablayout_bookmark_icons_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/bookmark_icon"/>
+
+                <ImageView
+                    android:id="@+id/btn_bookmark_active"
+                    android:layout_width="@dimen/tablayout_bookmark_icons_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone"
+                    android:background="@drawable/bookmark_icon_active"/>
+                <Utils.LightText
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:id="@+id/txt_bookmark"
+                    android:layout_gravity="center"
+                    android:text="@string/bookmark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_account"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/small_text_size"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_account"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:paddingRight="@dimen/half_margin"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/account_icon"/>
+
+                <ImageView
+                    android:id="@+id/btn_account_active"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:paddingRight="@dimen/half_margin"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/account_icon_active"/>
+                <Utils.LightText
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:id="@+id/txt_account"
+                    android:layout_gravity="center"
+                    android:text="@string/accounts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_recent"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/small_text_size"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_recent"
+                    android:layout_width="@dimen/tablayout_more_icons_width_"
+                    android:layout_height="@dimen/tablayout_more_icons_hight_"
+                    android:paddingRight="@dimen/half_margin"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/recent_icon"/>
+
+                <ImageView
+                    android:id="@+id/btn_recent_active"
+                    android:layout_width="@dimen/tablayout_more_icons_width_"
+                    android:layout_height="@dimen/tablayout_more_icons_hight_"
+                    android:paddingRight="@dimen/half_margin"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/recent_icon_active"/>
+                <Utils.LightText
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:id="@+id/txt_recents"
+                    android:layout_gravity="center"
+                    android:text="@string/recents"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

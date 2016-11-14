@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#660000</color>
+    <color name="colorPrimaryDark">#660000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="black">#000000</color>
+    <color name="light_black_2">#D7D7D7</color>
+    <color name="toast_border">#5C5858</color>
+    <color name="white">#ffffff</color>
+    <color name="light_gray_home">#BABABA</color>
+    <color name="text_gray_color">#AAAAAA</color>
+    <color name="red">#660000</color>
+    <color name="grey">#2a2a2a</color>
+    <color name="green">#006600</color>
+    <color name="green_listing">#009812</color>
+    <color name="light_red">#C5161B</color>
+    <color name="light_grey">#9A9A9A</color>
+    <color name="light_black">#F2F2F2</color>
+
+
+    <color name="actionbar_opacity">#DD000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="viewfinder_laser">#ffcc0000</color>
+    <color name="viewfinder_border">#ffafed44</color>
+    <color name="black_transperent">#2e2e2f</color>
+    <color name="transparent">#00000000</color>
+    <color name="bg_top">#495056</color>
+    <color name="black_light">#ff2b2b2b</color>
+    <color name="more_screen_txt_color">#767676</color>
+    <!-- <color name="gray_goose">#B2B2B2</color> -->
+    <color name="gray_goose">#818181</color>
+    <color name="grey_setting">#a2a2a2</color>
+    <color name="yellow">#ffffff00</color>
+    <color name="yellow_review">#FBA51C</color>
+    <color name="facebook">#3B5998</color>
+    <color name="grayless">#a9a9a9</color>
+    <color name="red_review">#C5161D</color>
+    <!-- <color name="gray">#999999</color> -->
+    <color name="gray">#818181</color>
+    <color name="light_gray">#F2F2F2</color>
+    <color name="gray_app">#EAEAEA</color>
+    <color name="white_dark">#E8E8E8E8</color>
+    <color name="gray_dark">#505050</color>
+    <color name="btn_border">#999999</color>
+    <color name="header_border">#51898C</color>
+    <color name="ovel_icon">#2C777A</color>
+    <color name="header_bg">#549392</color>
+    <color name="blue">#0000EE</color>
+
+    <color name="toast_text_color">#FFFFFF</color>
+    <color name="toast_bg_color">#F84B08</color>
+    <color name="menu_bg">#E6353535</color>
+
+    <color name="app_blue">#4e8ede</color>
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#303030</color>
+    <color name="list_background_pressed">#992416</color>
+    <color name="list_divider">#272727</color>
+    <color name="counter_text_bg">#626262</color>
+    <color name="counter_text_color">#c5c4c4</color>
+    <color name="viewpager">#ECECEC</color>
+    <color name="app_yellow">#F09926</color>
+    <color name="app_pink">#FF5169</color>
+    <color name="app_pink_strip">#FFFF5169</color>
+    <color name="app_red">#FF2D2D</color>
+    <color name="dialog_red">#c1272d</color>
+    <color name="dialog_green">#22b573</color>
+    <color name="dialog_yellow">#ffd110</color>
+    <color name="dark_yellow">#FCC135</color>
+    <color name="fb_color">#3B5999</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="gray_heading">#818181</color>
+    <color name="gray_value">#9c9c9c</color>
+    <color name="gray2">#a8a8a8</color>
+    <color name="lightred">#C6151D</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="YELLO2">#f8a820</color>
+    <color name="timing_txt_color">#6f7179</color>
+    <color name="mediam_black">#BF000000</color>
+    <color name="more_text_clr">#555555</color>
+    <color name="more_bg_color">#d7d7d7</color>
+    <color name="filter_blue_color">#007AFF</color>
+
+</resources>

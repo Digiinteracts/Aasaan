@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/half_margin_plus"
+    android:paddingTop="@dimen/half_margin_plus"
+    android:paddingLeft="@dimen/outletlistpage_magrig_left"
+    android:paddingRight="@dimen/Default_margin_plus"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_item_image"
+        android:layout_width="@dimen/outletlistpage_iv_item_image_width"
+        android:layout_height="@dimen/outletlistpage_iv_item_image_height"
+        android:scaleType="fitXY"
+        android:background="@drawable/pic"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="@dimen/outletlistpage_margintop"
+        android:id="@+id/linearLayout"
+        android:layout_alignTop="@+id/iv_item_image"
+        android:layout_toRightOf="@+id/iv_item_image"
+        android:layout_toEndOf="@+id/iv_item_image">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choithdrams"
+            android:includeFontPadding="false"
+            android:textColor="#C6151D"
+            android:singleLine="true"
+            android:textSize="@dimen/searchlistitem_subcat_textsize"
+            android:lines="1"
+            android:paddingRight="40dp"
+            android:ellipsize="end"
+            android:id="@+id/text_cat_name" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_below="@+id/text_cat_name"
+            android:layout_centerHorizontal="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Mankhol Rood Dubai"
+            android:includeFontPadding="false"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/outletlistpage_listview_text_address_txt_size"
+            android:drawablePadding="@dimen/Default_margin_half"
+            android:drawableLeft="@drawable/arrows"
+            android:id="@+id/text_address" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/Default_margin_plus"
+            android:background="@color/light_gray">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SuperMarket"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/outletlistpage_listview_text_address_txt_size"
+                android:padding="3dp"
+                android:layout_below="@+id/text_cat_name"
+                android:layout_alignTop="@+id/iv_item_image"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/text_market_type" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@drawable/round_corner_green">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:paddingTop="@dimen/searchlistitem_rating_pading_top_bottom"
+                android:paddingBottom="@dimen/searchlistitem_rating_pading_top_bottom"
+                android:paddingLeft="@dimen/searchlistitem_rating_pading_left_right"
+                android:paddingRight="@dimen/searchlistitem_rating_pading_left_right"
+                android:maxLength="3"
+                android:text="3.2"
+                android:background="@drawable/round_corner_green"
+                android:gravity="center"
+                android:textSize="@dimen/searchlistitem_rating_textsize"
+                android:id="@+id/txt_rating" />
+
+        </LinearLayout>
+        <ImageView
+            android:layout_width="@dimen/outletlistpage_iv_bookmark_width"
+            android:layout_height="@dimen/outletlistpage_iv_bookmark_height"
+            android:layout_gravity="end"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/bookmark"
+            android:id="@+id/iv_bookmark" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:padding="@dimen/outletlistpage_list_cmp_padding"
+        android:layout_toLeftOf="@+id/iv_mobile"
+        android:background="@color/light_gray"
+        android:orientation="horizontal">
+
+            <TextView
+                android:drawableLeft="@drawable/cmps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:layout_gravity="center"
+                android:paddingLeft="3dp"
+                android:gravity="center"
+                android:textSize="@dimen/outletlistpage_listview_text_address_txt_size"
+                android:paddingRight="3dp"
+                android:drawablePadding="@dimen/half_margin"
+                android:text="405 km"
+                android:id="@+id/txt_distance" />
+
+
+
+
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="@dimen/outletlistpage_iv_mobile_height_width"
+        android:layout_height="@dimen/outletlistpage_iv_mobile_height_width"
+        android:layout_gravity="center"
+
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/half_margin"
+        android:background="@drawable/call"
+        android:id="@+id/iv_mobile" />
+</RelativeLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_item_image"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:scaleType="centerCrop"
+        android:layout_margin="@dimen/small_text_size"
+        android:background="@drawable/pharamacy"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout"
+        android:layout_alignTop="@+id/iv_item_image"
+        android:layout_toRightOf="@+id/iv_item_image"
+        android:layout_toEndOf="@+id/iv_item_image">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choithrams"
+            android:textColor="#C6151D"
+
+
+            android:id="@+id/text_cat_name" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mankhol Rood Dubai"
+            android:textColor="@color/grey"
+            android:layout_below="@+id/text_cat_name"
+            android:layout_alignTop="@+id/iv_item_image"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/text_address" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_text_size"
+            android:background="#F2F2F2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SuperMarket"
+                android:textColor="@color/grey"
+                android:padding="@dimen/small_text_size"
+                android:layout_below="@+id/text_cat_name"
+                android:layout_alignTop="@+id/iv_item_image"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/text_market" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_text_size"
+            android:layout_gravity="end"
+            android:background="@drawable/border">
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:padding="5dp"
+                android:text="3.2"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:id="@+id/txt_rating" />
+
+        </LinearLayout>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginRight="@dimen/small_text_size"
+            android:background="@drawable/fav"
+            android:id="@+id/iv_bookmark" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+   android:layout_marginTop="@dimen/small_text_size"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#F2F2F2">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="@dimen/small_text_size"
+                    android:background="@drawable/compass"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey"
+                    android:layout_gravity="center"
+                    android:text="405 m"
+                    android:id="@+id/txt_distance" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_text_size"
+                android:background="#F2F2F2">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="end"
+
+                    android:layout_marginRight="@dimen/small_text_size"
+                    android:background="@drawable/call"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

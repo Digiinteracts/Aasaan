@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f1f1f1"
+    android:weightSum="1.0"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:id="@+id/ll_home"
+        android:layout_width="0dp"
+        android:layout_weight=".20"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/home"/>
+        <TextView
+            android:id="@+id/txt_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#3f3f3f"
+            android:layout_gravity="center_horizontal"
+            android:text="home"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_categorie"
+
+        android:layout_width="0dp"
+        android:layout_weight=".20"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/category"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+android:id="@+id/ll_bookmark"
+        android:layout_width="0dp"
+        android:layout_weight=".20"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bookmark"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#3f3f3f"
+            android:text="Bookmark"/>
+
+    </LinearLayout>
+    <LinearLayout
+android:id="@+id/ll_recent"
+        android:layout_width="0dp"
+        android:layout_weight=".20"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:paddingLeft="5dp"
+            android:background="@drawable/recent"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#3f3f3f"
+            android:text="Recents"/>
+
+    </LinearLayout>
+    <LinearLayout
+android:id="@+id/ll_account"
+        android:layout_width="0dp"
+        android:layout_weight=".20"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+        android:paddingRight="5dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/my_account"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#3f3f3f"
+            android:layout_gravity="center_horizontal"
+            android:text="Account"/>
+
+    </LinearLayout>
+</LinearLayout>

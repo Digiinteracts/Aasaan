@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="100dp">
+
+    <ImageView
+            android:id="@+id/iv_outlet_image"
+            android:layout_width="0dp"
+            android:src="@drawable/ic_media_play"
+            android:layout_weight="0.4"
+            android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="0.7"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/Default_margin"
+        >
+
+        <TextView
+            android:id="@+id/tv_outlet_name"
+            android:text="test Screen"
+            android:textSize="20dp"
+            android:textColor="@color/light_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_below="@id/tv_outlet_name"
+            android:id="@+id/imgview"
+            android:layout_width="wrap_content"
+            android:src="@drawable/black_arrow"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_outlet_loc"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/tv_outlet_name"
+            android:layout_toRightOf="@id/imgview"
+            android:text="test"
+            android:textColor="@color/gray_dark"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_outlet_type"
+            android:layout_width="wrap_content"
+            android:text="@string/new_store"
+            android:padding="@dimen/Default_margin_half"
+            android:layout_below="@id/tv_outlet_loc"
+            android:layout_marginTop="@dimen/Default_margin_double"
+            android:background="@color/light_black"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/tv_rating"
+            android:layout_width="wrap_content"
+            android:text="2.5"
+            android:paddingLeft="@dimen/Default_margin"
+            android:paddingRight="@dimen/Default_margin"
+            android:paddingTop="@dimen/Default_margin_half"
+            android:paddingBottom="@dimen/Default_margin_half"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/dark_yellow"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_below="@id/tv_rating"
+            android:id="@+id/iv_favorite"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/Default_margin_half"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/Default_margin_half"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/bookmark_btn"/>
+
+
+
+        <ImageView
+            android:id="@+id/iv_call"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/Default_margin_half"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/call"/>
+        <LinearLayout
+            android:layout_toLeftOf="@id/iv_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/Default_margin_half"
+            android:layout_alignParentBottom="true"
+            android:background="@color/light_black">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/Default_margin_half"
+                android:src="@drawable/cmps"/>
+        <TextView
+            android:id="@+id/tv_outlet_time"
+            android:layout_width="wrap_content"
+            android:text="@string/new_store"
+            android:background="@color/light_black"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

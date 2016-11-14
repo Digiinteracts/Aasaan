@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:background="@color/white"
+    android:paddingLeft="5dp"
+    android:layout_height="match_parent">
+
+    <Utils.LightText
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="jitu"
+        android:id="@+id/title"
+        android:gravity="center"
+        android:textSize="@dimen/company_list_item_text_size"
+        android:textColor="@color/black_light"/>
+
+    <Utils.LightText
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="View"
+        android:gravity="center"
+        android:textSize="@dimen/company_list_item_text_size"
+        android:visibility="visible"
+        android:id="@+id/email"
+
+        android:textColor="@color/green"/>
+
+    <Utils.LightText
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="Active"
+        android:gravity="right"
+        android:textSize="@dimen/company_list_item_text_size"
+        android:visibility="visible"
+        android:paddingRight="2dp"
+        android:id="@+id/status"
+        android:textColor="@color/black_light"/>
+
+    <Utils.LightText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:gravity="right"
+        android:paddingRight="2dp"
+
+        android:textSize="@dimen/company_list_item_text_size"
+        android:layout_marginRight="10dp"
+        android:id="@+id/Edit"
+        android:layout_gravity="right"
+        android:textColor="@color/lightred"/>
+</LinearLayout>

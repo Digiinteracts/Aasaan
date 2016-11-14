@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:layout_marginTop="1dp"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <com.assan.CircleImageView
+        android:layout_width="@dimen/categroies_list_CircleImageView_height_width"
+        android:layout_height="@dimen/categroies_list_CircleImageView_height_width"
+        android:layout_rowSpan="2"
+        android:id="@+id/imageView"
+        android:padding="10dp"
+        android:background="#ffffff"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_margin="@dimen/small_text_size"/>
+
+    <Utils.RegularText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:id="@+id/textViewName"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:text="New Text"
+        android:textSize="@dimen/large_text_size"
+        android:layout_centerInParent="true"
+        android:textColor="#ABABAB"
+
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_columnWeight="1"
+        android:visibility="gone"
+        android:id="@+id/text_xat_id"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="35dp"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView" />
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="wrap_content"
+        android:layout_rowSpan="2"
+        android:id="@+id/imageView2"
+        android:padding="10dp"
+        android:background="@drawable/arrow"
+        android:layout_row="0"
+        android:scaleType="fitCenter"
+        android:layout_alignBottom="@+id/textViewName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp" />
+</RelativeLayout>

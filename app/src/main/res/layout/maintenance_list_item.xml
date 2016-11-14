@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:pixlui="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/home_adapter_list_height"
+       >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sub_cat_imageView"
+        android:scaleType="fitXY"
+        android:background="@drawable/baby_sub"
+        />
+      <!-- <ImageView
+           android:layout_width="fill_parent"
+           android:layout_height="match_parent"
+           android:background="@drawable/trans_layer"
+           android:alpha="0.6"
+           android:scaleType="centerCrop" />
+-->
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_alignParentBottom="true"
+           android:paddingBottom="12dp"
+           android:layout_height="wrap_content">
+
+       <ImageView
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:id="@+id/iv_rightarrow"
+           android:layout_alignParentBottom="true"
+        android:background="@drawable/arrow_sub"
+        android:layout_marginBottom="@dimen/Default_margin_double"
+        android:layout_marginRight="@dimen/large_text_size"
+        android:layout_alignParentRight="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/small_text_size"
+        android:layout_alignParentLeft="true">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:id="@+id/babyicon"
+            android:src="@drawable/baby_care"
+            />
+        <TextView
+            android:id="@+id/sub_cat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:textColor="@color/white"
+            android:shadowDy="5"
+            android:shadowColor="#000000"
+            android:shadowRadius="3"
+            android:text="baby care"
+            android:textStyle="bold"
+            pixlui:textAllCaps="true"
+            android:layout_marginTop="@dimen/Default_margin_half"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+</RelativeLayout>
+
+
+</GridLayout>

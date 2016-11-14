@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.assan.Subscriptions">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/toplayout"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:padding="15dp"
+            android:id="@+id/backicn"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back_arrow"
+                />
+        </LinearLayout>
+
+        <Utils.RegularText
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/subscription_screen_text_size"
+            android:id="@+id/title"
+            android:textColor="@color/black_light"
+            android:layout_height="wrap_content"
+            android:text="Subscriptions"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:background="@color/light_gray"
+            android:layout_height="wrap_content">
+
+            <Utils.RegularText
+                android:layout_width="150dp"
+                android:gravity="center"
+                android:textSize="@dimen/subscription_screen_text_size"
+                android:id="@+id/typetxt"
+                android:textColor="@color/black_light"
+                android:layout_height="wrap_content"
+                android:text="Type"/>
+
+            <Utils.RegularText
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/subscription_screen_text_size"
+                android:id="@+id/period"
+                android:textColor="@color/black_light"
+                android:layout_height="wrap_content"
+                android:text="Period"/>
+
+            <Utils.RegularText
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/subscription_screen_text_size"
+                android:id="@+id/amount"
+                android:textColor="@color/black_light"
+                android:layout_height="wrap_content"
+                android:text="Amount"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:paddingLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="Basic Listing"
+                android:textSize="@dimen/subscription_screen_text_size"
+                android:paddingLeft="5dp"
+                android:paddingBottom="0dp"
+                android:id="@+id/baisclistcheckbox"/>
+            <Utils.RegularText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:gravity="center"
+                android:textSize="@dimen/subscription_screen_noactive_txt_size"
+                android:text="No Active Subscription"/>
+            </LinearLayout>
+
+            <Spinner
+                android:layout_width="60dp"
+                android:layout_weight="1"
+                android:id="@+id/basic_spinner"
+                android:background="@drawable/spinner_border"
+                android:layout_height="35dp"/>
+
+            <Utils.RegularText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/subscription_screen_text_size"
+                android:layout_weight="1"
+                android:id="@+id/basictxt"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:paddingLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:paddingBottom="0dp"
+                    android:paddingLeft="5dp"
+                    android:text="Priority Listing"
+                    android:textSize="@dimen/subscription_screen_text_size"
+                    android:id="@+id/prioritycheckbox"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Utils.RegularText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Top 6 position" />
+
+                    <Utils.RegularText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray"
+                        android:gravity="center"
+                        android:textSize="@dimen/subscription_screen_noactive_txt_size"
+                        android:text="No Active Subscription"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Spinner
+                android:layout_width="60dp"
+                android:layout_weight="1"
+                android:id="@+id/priority_spinner"
+                android:background="@drawable/spinner_border"
+                android:layout_height="35dp"/>
+
+            <Utils.RegularText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/subscription_screen_text_size"
+                android:id="@+id/prioritytxt"/>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="10dp"
+                android:orientation="vertical">
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="0dp"
+                    android:text="Home page baner"
+                    android:textSize="@dimen/subscription_screen_text_size"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/homecheckbox"/>
+
+                <Utils.RegularText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray"
+                    android:gravity="center"
+                    android:textSize="@dimen/subscription_screen_noactive_txt_size"
+                    android:text="No Active Subscription"/>
+               <!-- <Utils.RegularText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subscription_screen_text_size"
+                    android:text="Home page baner"/>-->
+            </LinearLayout>
+
+            <Spinner
+                android:layout_width="60dp"
+                android:layout_weight="1"
+                android:id="@+id/home_spinner"
+                android:background="@drawable/spinner_border"
+                android:layout_height="35dp"/>
+
+            <Utils.RegularText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/subscription_screen_text_size"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:id="@+id/hometxt"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subscription_screen_text_size"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="10dp"
+                android:orientation="vertical">
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:text="Sponsered ad"
+                    android:textSize="@dimen/subscription_screen_text_size"
+                    android:id="@+id/sponserchcekbox"/>
+
+                <Utils.RegularText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray"
+                    android:gravity="center"
+                    android:textSize="@dimen/subscription_screen_noactive_txt_size"
+                    android:text="No Active Subscription"/>
+             <!--   <Utils.RegularText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subscription_screen_text_size"
+                    android:text="Sponsered ad"/>-->
+            </LinearLayout>
+
+            <Spinner
+                android:layout_width="60dp"
+                android:layout_weight="1"
+                android:id="@+id/sponser_spinner"
+                android:background="@drawable/spinner_border"
+                android:layout_height="35dp"/>
+
+            <Utils.RegularText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/subscription_screen_text_size"
+                android:layout_weight="1"
+                android:id="@+id/sponsertxt"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/gray"/>
+        <Utils.RegularText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total: $1200"
+            android:layout_margin="15dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subscription_screen_text_size"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:id="@+id/totaltxt"/>
+   <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp">
+
+        <Utils.RegularText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subscription_screen_text_size"
+            android:text="Subscriptions Type:"/>
+
+        <Utils.RegularText
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subscription_screen_text_size"
+            android:layout_height="wrap_content"
+            android:text="Platinum"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginLeft="10dp">
+
+        <Utils.RegularText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subscription_screen_text_size"
+            android:layout_gravity="center_vertical"
+            android:text="Choose month:"/>
+
+        <Spinner
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:prompt="@string/country_prompt"
+            android:id="@+id/monthSpinner"
+            android:background="@drawable/spinner_border"
+            android:entries="@array/country_arrays"
+            android:theme="@style/countryspinner"
+           />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp">
+
+        <Utils.RegularText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subscription_screen_text_size"
+            android:text="Amount Paid:"/>
+
+        <Utils.RegularText
+            android:layout_width="wrap_content"
+            android:textColor="@color/light_red"
+            android:layout_height="wrap_content"
+            android:id="@+id/amountpaidtxt"
+            android:textSize="@dimen/subscription_screen_text_size"
+            android:text="AED 300"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginLeft="10dp">
+
+        <Utils.RegularText
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:text=""/>
+
+        <Utils.RegularText
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:paddingLeft="30dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:paddingRight="30dp"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:text="PAY"/>
+    </LinearLayout>
+
+    <Utils.RegularText
+        android:layout_width="wrap_content"
+        android:textColor="@color/light_red"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:textSize="@dimen/subscription_screen_text_size"
+        android:layout_height="wrap_content"
+        android:text="View Subcriptions Details"/>-->
+
+    <ImageView
+        android:layout_width="125dp"
+        android:layout_height="35dp"
+        android:id="@+id/playnow"
+        android:background="@drawable/pay_now_btn"
+        android:text="PAY NOW!"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_foorte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f1f1f1"
+            android:weightSum="1.0"
+            android:paddingBottom="3dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/ll_home"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_marginTop="@dimen/half_margin"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_home"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/home_icon"/>
+                <ImageView
+                    android:id="@+id/btn_home_active"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/home_icon_activer"/>
+                <Utils.LightText
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:textColor="@color/more_screen_txt_color"
+                    android:id="@+id/txt_home"
+                    android:layout_gravity="center"
+                    android:text="@string/home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_categorie"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/small_text_size"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_cat"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_categories_hight"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/categories_icon"/>
+                <ImageView
+                    android:id="@+id/btn_cat_active"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_categories_hight"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/categories_icon_active"/>
+                <Utils.LightText
+                    android:layout_marginTop="@dimen/tablayout_icons_categories_pading"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:id="@+id/txt_category"
+                    android:layout_gravity="center"
+                    android:text="@string/category"
+                    android:textColor="@color/more_screen_txt_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_bookmark"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/half_margin"
+
+                android:layout_marginLeft="@dimen/small_text_size"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_bookmark"
+                    android:layout_width="@dimen/tablayout_bookmark_icons_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/bookmark_icon"/>
+
+                <ImageView
+                    android:id="@+id/btn_bookmark_active"
+                    android:layout_width="@dimen/tablayout_bookmark_icons_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone"
+                    android:background="@drawable/bookmark_icon_active"/>
+                <Utils.LightText
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:id="@+id/txt_bookmark"
+                    android:layout_gravity="center"
+                    android:text="@string/bookmark"
+                    android:textColor="@color/more_screen_txt_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_account"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/half_margin"
+
+                android:layout_marginLeft="@dimen/small_text_size"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_account"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:paddingRight="@dimen/half_margin"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/account_icon"/>
+
+                <ImageView
+                    android:id="@+id/btn_account_active"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:paddingRight="@dimen/half_margin"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/account_icon_active"/>
+                <Utils.LightText
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:id="@+id/txt_account"
+                    android:layout_gravity="center"
+                    android:textColor="@color/more_screen_txt_color"
+                    android:text="@string/accounts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_recent"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/half_margin"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/small_text_size"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_recent"
+                    android:visibility="gone"
+                    android:layout_width="@dimen/tablayout_more_icons_width_"
+                    android:layout_height="@dimen/tablayout_more_icons_hight_"
+                    android:paddingRight="@dimen/half_margin"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/recent_icon"/>
+
+                <ImageView
+                    android:id="@+id/btn_recent_active"
+                    android:layout_width="@dimen/tablayout_more_icons_width_"
+                    android:layout_height="@dimen/tablayout_more_icons_hight_"
+                    android:paddingRight="@dimen/half_margin"
+                    android:visibility="visible"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/recent_icon_active"/>
+                <Utils.LightText
+                    android:textAllCaps="true"
+                    android:textColor="@color/lightred"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:id="@+id/txt_recents"
+                    android:layout_gravity="center"
+                    android:text="@string/recents"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

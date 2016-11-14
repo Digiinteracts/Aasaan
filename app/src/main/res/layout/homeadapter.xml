@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pixlui="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_adapter_list_height">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/home_adapter_list_height"
+            android:id="@+id/sub_cat_imageView"
+            android:src="@drawable/placeholder"
+            android:scaleType="fitXY"
+            />
+       <!-- <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/home_adapter_list_height"
+            android:id="@+id/coverimg"
+            android:background="@drawable/trans_layer"
+            android:alpha="0.5"
+            android:scaleType="centerCrop"
+            />-->
+          />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+           >
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SEARCH FOR"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#aaaaaa"
+            android:textSize="@dimen/homeadapter_searchfor_text_size"
+            pixlui:textAllCaps="true"
+            />
+
+        <TextView
+            android:id="@+id/text_image_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="SEARCH FOR"
+            android:textColor="@color/white"
+            android:textSize="@dimen/homeadapter_searchfor_sub_text_size"
+            android:shadowDy="5"
+            android:shadowColor="#000000"
+            android:shadowRadius="3"
+            android:textStyle="bold"
+            android:layout_marginTop="-5dp"
+            pixlui:textAllCaps="true"
+            android:paddingTop="0dp"
+            android:layout_below="@+id/text" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

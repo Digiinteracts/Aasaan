@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red">
+
+    <LinearLayout
+        android:layout_margin="@dimen/margin10"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingRight="5dp"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageview_cross"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:textColor="#ffffff"
+            android:textStyle="normal"
+            android:layout_gravity="right"
+
+            android:layout_marginRight="@dimen/margin10"
+            android:background="@drawable/close_1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <LinearLayout
+            android:id="@+id/ll_main"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+        <com.assan.CircleImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="60dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+
+            android:src="@drawable/profile_pic"/>
+
+        <RelativeLayout
+            android:layout_toRightOf="@id/ll_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Utils.Boldtext
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="NITESH KUMAR"
+                android:textSize="@dimen/write_review_title_text_size"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+        </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_main1"
+            android:layout_below="@id/rl_main"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+
+        <RatingBar
+            android:id="@+id/ratingbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/ratingbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginRight="@dimen/margin10"
+                android:textSize="@dimen/write_review_rating_textsize"
+                android:id="@+id/txt_ratingvalue"
+                android:layout_alignParentRight="true"
+                android:text="0.0"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_main2"
+        android:layout_below="@id/rl_main1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_margin="@dimen/margin1"
+            android:id="@+id/areview"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/write_review_title_text_size"
+            android:text="Write a review"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_main3"
+            android:layout_below="@id/rl_main2"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/WriteReview_edittext"
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:gravity="top|left"
+            android:maxLines="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@+id/rl_main2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="@dimen/extra_large_text_size"
+            android:layout_marginBottom="@dimen/extra_large_text_size"
+            android:text="Save"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="22sp"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/login_button"
+            android:id="@+id/btn_login" />
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rl_foorte"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f1f1f1"
+            android:weightSum="1.0"
+            android:paddingBottom="3dp"
+            android:paddingTop="5dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/ll_home"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_marginTop="@dimen/half_margin"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_home"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/home_icon"/>
+                <ImageView
+                    android:id="@+id/btn_home_active"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/home_icon_activer"/>
+                <Utils.LightText
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:textColor="@color/lightred"
+                    android:id="@+id/txt_home"
+                    android:layout_gravity="center"
+                    android:text="@string/home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_categorie"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/half_margin"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/small_text_size"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_cat"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_categories_hight"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/categories_icon"/>
+                <ImageView
+                    android:id="@+id/btn_cat_active"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_categories_hight"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/categories_icon_active"/>
+                <Utils.LightText
+                    android:layout_marginTop="@dimen/tablayout_icons_categories_pading"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:id="@+id/txt_category"
+                    android:layout_gravity="center"
+                    android:text="@string/category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_bookmark"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/half_margin"
+
+                android:layout_marginLeft="@dimen/small_text_size"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_bookmark"
+                    android:layout_width="@dimen/tablayout_bookmark_icons_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/bookmark_icon"/>
+
+                <ImageView
+                    android:id="@+id/btn_bookmark_active"
+                    android:layout_width="@dimen/tablayout_bookmark_icons_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone"
+                    android:background="@drawable/bookmark_icon_active"/>
+                <Utils.LightText
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:id="@+id/txt_bookmark"
+                    android:layout_gravity="center"
+                    android:text="@string/bookmark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_account"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/half_margin"
+
+                android:layout_marginLeft="@dimen/small_text_size"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_account"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:paddingRight="@dimen/half_margin"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/account_icon"/>
+
+                <ImageView
+                    android:id="@+id/btn_account_active"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:paddingRight="@dimen/half_margin"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/account_icon_active"/>
+                <Utils.LightText
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:id="@+id/txt_account"
+                    android:layout_gravity="center"
+                    android:text="@string/accounts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_recent"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/half_margin"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/small_text_size"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_recent"
+                    android:layout_width="@dimen/tablayout_more_icons_width_"
+                    android:layout_height="@dimen/tablayout_more_icons_hight_"
+                    android:paddingRight="@dimen/half_margin"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/recent_icon"/>
+
+                <ImageView
+                    android:id="@+id/btn_recent_active"
+                    android:layout_width="@dimen/tablayout_more_icons_width_"
+                    android:layout_height="@dimen/tablayout_more_icons_hight_"
+                    android:paddingRight="@dimen/half_margin"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/recent_icon_active"/>
+                <Utils.LightText
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:id="@+id/txt_recents"
+                    android:layout_gravity="center"
+                    android:text="@string/recents"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+

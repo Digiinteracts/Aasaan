@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+       android:paddingBottom="4dp"
+        android:id="@+id/top_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentLeft="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top5"
+                android:id="@+id/yourlocation"
+                android:textSize="@dimen/home_screen_youtlocation_textsize"
+                android:textColor="@color/text_gray_color"
+                android:text="YOUR LOCATION"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                   android:drawablePadding="1dp"
+                    android:drawableRight="@drawable/down_arrow"
+                    android:id="@+id/txtaddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:layout_gravity="top"
+                    android:textSize="@dimen/home_screen_fetching_textsize"
+                    android:text="Fetching..."/>
+               <!-- <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/down_arrow"
+                    android:layout_marginLeft="@dimen/Default_margin_plus"
+                    android:layout_gravity="center"
+                    android:id="@+id/imageView4" />-->
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/tv_search_outlet"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="14dp"
+            android:layout_alignParentEnd="true"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--<ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="2dp"
+        android:layout_below="@+id/top_rl"
+        android:layout_marginTop="2dp"
+        android:layout_above="@+id/rl_foorte"
+        android:id="@+id/homelistview" />-->
+
+    <com.twotoasters.jazzylistview.JazzyListView
+        android:id="@+id/homelistview"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/rl_foorte"
+        android:dividerHeight="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/top_rl"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/text_tryagain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Try Again"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textSize="@dimen/ex_large_text_size"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:id="@+id/rl_foorte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f1f1f1"
+            android:paddingTop="5dp"
+            android:paddingBottom="3dp"
+            android:weightSum="1.0"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/ll_home"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_home"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/home_icon"/>
+                <ImageView
+                    android:id="@+id/btn_home_active"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/home_icon_activer"/>
+                <Utils.LightText
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:id="@+id/txt_home"
+                    android:layout_gravity="center"
+                    android:text="@string/home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_categorie"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/small_text_size"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_cat"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_categories_hight"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/categories_icon"/>
+                <ImageView
+                    android:id="@+id/btn_cat_active"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_categories_hight"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/categories_icon_active"/>
+                <Utils.LightText
+                    android:layout_marginTop="@dimen/tablayout_icons_categories_pading"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:id="@+id/txt_category"
+                    android:layout_gravity="center"
+                    android:text="@string/category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_bookmark"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_text_size"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_bookmark"
+                    android:layout_width="@dimen/tablayout_bookmark_icons_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/bookmark_icon"/>
+
+                <ImageView
+                    android:id="@+id/btn_bookmark_active"
+                    android:layout_width="@dimen/tablayout_bookmark_icons_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone"
+                    android:background="@drawable/bookmark_icon_active"/>
+                <Utils.LightText
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:id="@+id/txt_bookmark"
+                    android:layout_gravity="center"
+                    android:text="@string/bookmark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_account"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_text_size"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_account"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:paddingRight="@dimen/half_margin"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/account_icon"/>
+
+                <ImageView
+                    android:id="@+id/btn_account_active"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:paddingRight="@dimen/half_margin"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/account_icon_active"/>
+                <Utils.LightText
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:id="@+id/txt_account"
+                    android:layout_gravity="center"
+                    android:text="@string/accounts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_more"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:visibility="visible"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_text_size"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_recent"
+                    android:layout_width="@dimen/tablayout_more_icons_width_"
+                    android:layout_height="@dimen/tablayout_more_icons_hight_"
+                    android:paddingRight="@dimen/half_margin"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/recent_icon"/>
+
+                <ImageView
+                    android:id="@+id/btn_recent_active"
+                    android:layout_width="@dimen/tablayout_more_icons_width_"
+                    android:layout_height="@dimen/tablayout_more_icons_hight_"
+                    android:paddingRight="@dimen/half_margin"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/recent_icon_active"/>
+                <Utils.LightText
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:id="@+id/txt_more"
+                    android:layout_gravity="center"
+                    android:text="@string/recents"
+                    android:layout_marginTop="@dimen/tablayout_more_icons_margin_top_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

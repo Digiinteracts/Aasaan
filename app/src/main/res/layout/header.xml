@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:background="#ffffff">
+  <RelativeLayout
+      android:id="@+id/slider"
+      android:layout_width="fill_parent"
+      android:layout_height="@dimen/home_adapter_list_height"
+      android:layout_below="@+id/ll_left">
+
+  <!-- <android.support.v4.view.ViewPager
+       android:id="@+id/pager"
+       android:layout_width="fill_parent"
+       android:layout_height="@dimen/home_adapter_list_height"
+       android:layout_weight="1"
+       />
+-->
+
+   <cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
+       android:id="@+id/pager"
+       android:layout_width="fill_parent"
+       android:layout_height="@dimen/home_adapter_list_height"
+       android:layout_weight="1" />
+
+   <com.viewpagerindicator.CirclePageIndicator
+       android:id="@+id/indicator"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:layout_centerHorizontal="true"
+       android:gravity="bottom"
+       android:padding="10dip"
+       app:centered="true"
+       app:fillColor="#FFFFFF"
+       app:pageColor="#FF0000"
+       app:snap="false" />
+  </RelativeLayout>
+
+
+  <TextView
+      android:id="@+id/txt_badge"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Quick search"
+      android:textColor="@color/text_gray_color"
+      android:layout_marginTop="2dp"
+      android:textSize="@dimen/home_adapter_qucksearch_textsize"
+      android:layout_marginLeft="5dp"
+      android:layout_below="@+id/slider"/>
+
+  <RelativeLayout
+      android:layout_marginBottom="1dp"
+      android:layout_width="match_parent"
+      android:layout_below="@+id/txt_badge"
+      android:background="#F2F2F2"
+      android:layout_marginTop="@dimen/margin_top5"
+      android:layout_height="wrap_content">
+
+  <it.sephiroth.android.library.widget.HListView
+      android:id="@+id/hl_v"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="5dp"
+      android:layout_marginRight="5dp"
+      android:layout_marginTop="@dimen/margin_top5"
+      android:layout_marginBottom="@dimen/margin_top5"
+      android:cacheColorHint="@android:color/transparent"
+      android:divider="#00000000"
+      android:fadingEdge="none"
+      android:listSelector="@android:color/transparent"
+      android:scrollbars="none"
+      android:scrollingCache="true"
+      app:hlv_dividerWidth="5dp" />
+  </RelativeLayout>
+ </RelativeLayout>
+
+</LinearLayout>

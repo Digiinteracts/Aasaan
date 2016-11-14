@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingBottom="1dp"
+    android:paddingTop="@dimen/Default_margin_half"
+    android:background="#ffffff">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/hl_image_iv"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/baby_care"
+            android:layout_marginBottom="@dimen/half_margin" />
+
+          <Utils.LightText
+        android:id="@+id/txt_subcat"
+        android:layout_width="fill_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+              android:textColor="@color/grey"
+        android:textSize="@dimen/small_text_size"
+        android:gravity="left"
+        android:text="baby"
+        />
+
+    <Utils.LightText
+        android:id="@+id/txt_subcat_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:textColor="@color/grey"
+        android:textSize="@dimen/small_text_size"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:fontFamily="sans-serif-Regular"
+        android:text="Baby"
+        />
+
+</LinearLayout>

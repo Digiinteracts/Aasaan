@@ -1,0 +1,1770 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg">
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/large_text_size">
+
+                <Utils.Boldtext
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Store"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    android:textColor="@color/white"
+                    android:id="@+id/contactus"
+                    android:textSize="20sp"/>
+
+                <Utils.RoundedImageView
+                    android:id="@+id/iv_upload_VIEW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    android:background="@drawable/plus_1"
+                    android:layout_marginTop="@dimen/large_text_size"
+                    android:layout_below="@+id/imageview_cross"
+                    android:layout_centerHorizontal="true" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/mainlayout"
+                    android:layout_marginTop="40dp"
+                    android:layout_below="@+id/iv_upload_VIEW"
+                    android:layout_height="wrap_content">
+
+                     <LinearLayout
+                         android:id="@+id/ll_feature"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="@dimen/small_text_size"
+                         android:orientation="horizontal">
+
+                         <Utils.RegularText
+                             android:layout_width="@dimen/add_new_store_textview_width"
+                             android:layout_height="wrap_content"
+                             android:text="Feature Type"
+                             android:textSize="@dimen/large_text_size"
+                             android:textColor="@color/white"/>
+                         <Utils.RegularText
+                             android:id="@+id/edt_feature_type"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:background="@drawable/strip"
+                             android:text="Platinum"
+                             android:gravity="center|left"
+                             android:paddingLeft="@dimen/half_margin_plus"
+                             android:textColor="@color/grey"
+                             />
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/ll_company"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:gravity="center"
+                         android:layout_marginTop="@dimen/add_new_company_margin_top"
+                         android:orientation="horizontal">
+                         <Utils.RegularText
+                             android:layout_width="@dimen/add_new_store_textview_width"
+                             android:layout_height="wrap_content"
+                             android:text="Company"
+                             android:textSize="@dimen/large_text_size"
+                             android:textColor="@color/white"/>
+                         <Utils.RegularText
+                             android:layout_width="match_parent"
+                             android:layout_height="35dp"
+                             android:visibility="visible"
+                             android:hint="Company Name"
+                             android:gravity="center|left"
+                             android:paddingLeft="5dp"
+                             android:prompt="@string/country_prompt"
+                             android:background="@color/white"
+                             android:id="@+id/companyname"/>
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/ll_title"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="@dimen/add_new_company_margin_top"
+                         android:orientation="horizontal">
+
+                         <Utils.RegularText
+                             android:layout_width="@dimen/add_new_store_textview_width"
+                             android:layout_height="wrap_content"
+                             android:text="Store name"
+                             android:textSize="@dimen/large_text_size"
+                             android:textColor="@color/white"/>
+                         <EditText
+                             android:id="@+id/edt_title"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:background="@drawable/strip"
+                             android:hint="Enter title"
+                             android:textColorHint="@color/text_gray_color"
+                             android:textSize="@dimen/large_text_size"
+                             android:paddingLeft="@dimen/half_margin_plus"
+                             android:textColor="@color/grey"
+                             />
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/ll_categories"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="@dimen/add_new_company_margin_top"
+                         android:orientation="horizontal">
+                         <Utils.RegularText
+                             android:layout_width="@dimen/add_new_store_textview_width"
+                             android:layout_height="wrap_content"
+                             android:text="Category"
+                             android:textSize="@dimen/large_text_size"
+                             android:textColor="@color/white"/>
+
+                         <Spinner
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/spinner_height"
+                             android:visibility="visible"
+                             android:prompt="@string/country_prompt"
+                             android:padding="5dp"
+                             android:entries="@array/country_arrays"
+                             android:theme="@style/countryspinner"
+                             android:background="@color/white"
+                             android:id="@+id/category_spinner"/>
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:layout_marginTop="@dimen/add_new_company_margin_top"
+                         android:orientation="horizontal">
+
+                         <Utils.RegularText
+                             android:layout_width="@dimen/add_new_store_textview_width"
+                             android:layout_height="wrap_content"
+                             android:text="Sub Category"
+                             android:textSize="@dimen/large_text_size"
+                             android:textColor="@color/white"/>
+                         <Utils.RegularText
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:background="@drawable/strip"
+                             android:id="@+id/edt_subcategory"
+                             android:paddingLeft="@dimen/half_margin_plus"
+                             android:textColor="@color/grey"
+                             />
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/ll_description"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="@dimen/add_new_company_margin_top"
+                         android:orientation="horizontal">
+
+                         <Utils.RegularText
+                             android:layout_width="@dimen/add_new_store_textview_width"
+                             android:layout_height="wrap_content"
+                             android:text="Description"
+                             android:textSize="@dimen/large_text_size"
+                             android:textColor="@color/white"/>
+                         <EditText
+                             android:id="@+id/edt_description"
+                             android:layout_width="match_parent"
+                             android:layout_height="100dp"
+                             android:textSize="@dimen/large_text_size"
+                             android:background="@drawable/strip"
+                             android:paddingLeft="@dimen/half_margin_plus"
+                             android:textColor="@color/grey"
+                             />
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/ll_building_name"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="@dimen/add_new_company_margin_top"
+                         android:orientation="horizontal">
+
+                         <Utils.RegularText
+                             android:layout_width="@dimen/add_new_store_textview_width"
+                             android:layout_height="wrap_content"
+                             android:text="Building Name"
+                             android:textSize="@dimen/large_text_size"
+                             android:textColor="@color/white"/>
+                         <EditText
+                             android:id="@+id/edt_building_name"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:background="@drawable/strip"
+                             android:hint="Enter building name"
+                             android:textColorHint="@color/text_gray_color"
+                             android:textSize="@dimen/large_text_size"
+                             android:paddingLeft="@dimen/half_margin_plus"
+                             android:textColor="@color/grey"
+                             />
+
+                     </LinearLayout>
+
+                    <LinearLayout
+                         android:id="@+id/ll_street"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="@dimen/add_new_company_margin_top"
+                         android:orientation="horizontal">
+
+                         <Utils.RegularText
+                             android:layout_width="@dimen/add_new_store_textview_width"
+                             android:layout_height="wrap_content"
+                             android:text="Street"
+                             android:textSize="@dimen/large_text_size"
+                             android:textColor="@color/white"/>
+                         <EditText
+                             android:id="@+id/edt_street"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:background="@drawable/strip"
+                             android:hint="Enter building name"
+                             android:textColorHint="@color/text_gray_color"
+                             android:textSize="@dimen/large_text_size"
+                             android:paddingLeft="@dimen/half_margin_plus"
+                             android:textColor="@color/grey"
+                             />
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/ll_city"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:gravity="center"
+                         android:layout_marginTop="@dimen/add_new_company_margin_top"
+                         android:orientation="horizontal">
+
+                         <Utils.RegularText
+                             android:layout_width="@dimen/add_new_store_textview_width"
+                             android:layout_height="wrap_content"
+                             android:text="City"
+                             android:textSize="@dimen/large_text_size"
+                             android:textColor="@color/white"/>
+                         <Spinner
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/spinner_height"
+                             android:visibility="visible"
+                             android:prompt="@string/country_prompt"
+                             android:padding="5dp"
+                             android:entries="@array/country_arrays"
+                             android:theme="@style/countryspinner"
+                             android:background="@color/white"
+                             android:id="@+id/cityspinner"/>
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/ll_state"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:gravity="center"
+                         android:layout_marginTop="@dimen/add_new_company_margin_top"
+                         android:orientation="horizontal">
+
+                         <Utils.RegularText
+                             android:layout_width="@dimen/add_new_store_textview_width"
+                             android:layout_height="wrap_content"
+                             android:text="State"
+                             android:textSize="@dimen/large_text_size"
+                             android:textColor="@color/white"/>
+                         <Spinner
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/spinner_height"
+                             android:padding="5dp"
+                             android:visibility="visible"
+                             android:prompt="@string/country_prompt"
+                             android:entries="@array/country_arrays"
+                             android:theme="@style/countryspinner"
+                             android:background="@color/white"
+                             android:id="@+id/statespinner"/>
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/ll_landmark"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:gravity="center"
+                         android:layout_marginTop="@dimen/add_new_company_margin_top"
+                         android:orientation="horizontal">
+
+                         <Utils.RegularText
+                             android:layout_width="@dimen/add_new_store_textview_width"
+                             android:layout_height="wrap_content"
+                             android:text="Landmark"
+                             android:textSize="@dimen/large_text_size"
+                             android:textColor="@color/white"/>
+                         <Spinner
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/spinner_height"
+                             android:padding="5dp"
+                             android:visibility="visible"
+                             android:theme="@style/countryspinner"
+                             android:prompt="@string/country_prompt"
+                             android:entries="@array/country_arrays"
+                             android:background="@color/white"
+                             android:id="@+id/landmarkspinner"/>
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="@dimen/add_new_company_margin_top"
+                         android:orientation="horizontal">
+
+                         <Utils.RegularText
+                             android:layout_width="@dimen/add_new_store_textview_width"
+                             android:layout_height="wrap_content"
+                             android:text="P.O Box"
+                             android:textSize="@dimen/large_text_size"
+                             android:textColor="@color/white"/>
+                         <EditText
+                             android:id="@+id/edt_postalcode"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:background="@drawable/strip"
+                             android:hint="Enter Postal code"
+                             android:textColorHint="@color/text_gray_color"
+                             android:textSize="@dimen/large_text_size"
+                             android:inputType="number"
+                             android:paddingLeft="@dimen/half_margin_plus"
+                             android:textColor="@color/grey"
+                             />
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:gravity="center"
+                         android:layout_marginTop="@dimen/add_new_company_margin_top"
+                         android:orientation="horizontal">
+
+                         <Utils.RegularText
+                             android:layout_width="@dimen/add_new_store_textview_width"
+                             android:layout_height="wrap_content"
+                             android:text=""
+                             android:textSize="@dimen/large_text_size"
+                             android:textColor="@color/white"/>
+
+                         <LinearLayout
+                             android:layout_width="match_parent"
+                             android:id="@+id/getyourlocation"
+                             android:layout_height="wrap_content">
+                         <ImageView
+                             android:layout_width="15dp"
+                             android:layout_height="15dp"
+                             android:layout_gravity="center"
+                             android:src="@drawable/red"/>
+                         <Utils.RegularText
+                             android:layout_width="150dp"
+                             android:layout_height="wrap_content"
+                             android:text="  Get your location"
+                             android:layout_marginRight="55dp"
+                             android:visibility="visible"
+                             android:textSize="@dimen/large_text_size"
+                             android:textColor="@color/white"/>
+                         </LinearLayout>
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:layout_marginTop="@dimen/add_new_company_margin_top"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="horizontal">
+
+                         <Utils.RegularText
+                             android:layout_width="@dimen/add_new_store_textview_width"
+                             android:layout_height="wrap_content"
+                             android:text="Latitude"
+                             android:textSize="@dimen/large_text_size"
+                             android:textColor="@color/white"/>
+                         <EditText
+                             android:id="@+id/edt_Latitude"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:background="@drawable/strip"
+                             android:hint="Enter Latitude"
+                             android:textColorHint="@color/text_gray_color"
+                             android:textSize="@dimen/large_text_size"
+                             android:paddingLeft="@dimen/half_margin_plus"
+                             android:inputType="number"
+                             android:textColor="@color/grey"
+                             />
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:layout_marginTop="@dimen/add_new_company_margin_top"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="horizontal">
+
+                         <Utils.RegularText
+                             android:layout_width="@dimen/add_new_store_textview_width"
+                             android:layout_height="wrap_content"
+                             android:text="Longitude"
+                             android:textSize="@dimen/large_text_size"
+                             android:textColor="@color/white"/>
+                         <EditText
+                             android:id="@+id/edt_longitude"
+                             android:layout_width="match_parent"
+                             android:inputType="number"
+                             android:layout_height="wrap_content"
+                             android:background="@drawable/strip"
+                             android:textColorHint="@color/text_gray_color"
+                             android:textSize="@dimen/large_text_size"
+                             android:hint="Enter Longitude"
+                             android:paddingLeft="@dimen/half_margin_plus"
+                             android:textColor="@color/grey"
+                             />
+
+                     </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Utils.RegularText
+                            android:layout_width="@dimen/add_new_store_textview_width"
+                            android:layout_height="wrap_content"
+                            android:text="Store contact no."
+                            android:textSize="@dimen/large_text_size"
+                            android:textColor="@color/white"/>
+                        <EditText
+                            android:id="@+id/edt_store_contactno"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:textColorHint="@color/text_gray_color"
+                            android:textSize="@dimen/large_text_size"
+                            android:background="@drawable/strip"
+                            android:hint="Enter Store contact No"
+                            android:paddingLeft="@dimen/half_margin_plus"
+                            android:textColor="@color/grey"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Utils.RegularText
+                            android:layout_width="@dimen/add_new_store_textview_width"
+                            android:layout_height="wrap_content"
+                            android:text="Landline No."
+                            android:textSize="@dimen/large_text_size"
+                            android:textColor="@color/white"/>
+                        <EditText
+                            android:id="@+id/edt_landlineno"
+                            android:inputType="number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/strip"
+                            android:textColorHint="@color/text_gray_color"
+                            android:textSize="@dimen/large_text_size"
+                            android:hint="Enter Landline No."
+                            android:paddingLeft="@dimen/half_margin_plus"
+                            android:textColor="@color/grey" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Utils.RegularText
+                            android:layout_width="@dimen/add_new_store_textview_width"
+                            android:layout_height="wrap_content"
+                            android:text="Landline No. 2"
+                            android:textSize="@dimen/large_text_size"
+                            android:textColor="@color/white"/>
+                        <EditText
+                            android:id="@+id/edt_landlineno2"
+                            android:inputType="number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/strip"
+                            android:textColorHint="@color/text_gray_color"
+                            android:textSize="@dimen/large_text_size"
+                            android:hint="Enter Landline No."
+                            android:paddingLeft="@dimen/half_margin_plus"
+                            android:textColor="@color/grey"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                            <Utils.RegularText
+                                android:layout_width="@dimen/add_new_store_textview_width"
+                                android:layout_height="wrap_content"
+                                android:text="Sun-Thu"
+                                android:id="@+id/satthu_txt"
+                                android:textSize="@dimen/large_text_size"
+                                android:textColor="@color/white"/>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <Utils.RegularText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Available 24 x 7"
+                                    android:gravity="left"
+                                    android:id="@+id/availabletxt"
+                                    android:textSize="@dimen/large_text_size"
+                                    android:textColor="@color/white"/>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/checkboxlayout"
+                                    android:layout_below="@+id/availabletxt"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Yes"
+                                        android:textColor="@color/white"
+                                        android:padding="10dp"
+                                        android:id="@+id/checkbox1"/>
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="10dp"
+                                        android:text="No"
+                                        android:textColor="@color/white"
+                                        android:id="@+id/checkbox2"/>
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:id="@+id/satthu_store_timing_layout"
+                            android:layout_height="wrap_content">
+
+                            <Utils.RegularText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Store Timing"
+                                android:gravity="center"
+                                android:id="@+id/storetiming"
+                                android:textSize="@dimen/large_text_size"
+                                android:textColor="@color/white"/>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_height="wrap_content">
+                                <Utils.RegularText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Open time"
+                                    android:gravity="left"
+                                    android:id="@+id/opentimetxt"
+                                    android:textSize="@dimen/large_text_size"
+                                    android:textColor="@color/white"/>
+
+                                <Utils.RegularText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="From: "
+                                    android:gravity="left"
+                                    android:id="@+id/openfrom"
+                                    android:layout_toRightOf="@+id/opentimetxt"
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="@dimen/large_text_size"
+                                    android:textColor="@color/white"/>
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/open_time_from_hour"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/openfrom"/>
+
+                                <TextView
+                                    android:layout_width="10dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="6dp"
+                                    android:layout_marginRight="5dp"
+                                    android:id="@+id/openfromcolon1"
+                                    android:text=":"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:layout_toRightOf="@+id/open_time_from_hour"/>
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/open_time_from_mint"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/openfromcolon1"/>
+
+                                <Utils.RegularText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="To: "
+                                    android:gravity="left"
+                                    android:id="@+id/opentme_to_txt"
+                                    android:layout_toRightOf="@+id/open_time_from_mint"
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="@dimen/large_text_size"
+                                    android:textColor="@color/white"/>
+
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/open_time_to_hour"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/opentme_to_txt"/>
+
+                                <TextView
+                                    android:layout_width="10dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:id="@+id/opentocolon1"
+                                    android:text=":"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:layout_toRightOf="@+id/open_time_to_hour"/>
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/open_time_to_mint"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/opentocolon1"/>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_vertical"
+                                android:layout_height="wrap_content">
+                                <Utils.RegularText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Break time"
+                                    android:gravity="left"
+                                    android:id="@+id/breaktimetxt"
+                                    android:textSize="@dimen/large_text_size"
+                                    android:textColor="@color/white"/>
+
+                                <Utils.RegularText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="From: "
+                                    android:gravity="left"
+                                    android:id="@+id/breakform"
+                                    android:layout_toRightOf="@+id/breaktimetxt"
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="@dimen/large_text_size"
+                                    android:textColor="@color/white"/>
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/brk_time_from_hour"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/breakform"/>
+
+                                <TextView
+                                    android:layout_width="10dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:id="@+id/brkfromcolon1"
+                                    android:text=":"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:layout_toRightOf="@+id/brk_time_from_hour"/>
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/brk_time_from_mint"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/brkfromcolon1"/>
+
+                                <Utils.RegularText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="To: "
+                                    android:gravity="left"
+                                    android:id="@+id/brktme_to_txt"
+                                    android:layout_toRightOf="@+id/brk_time_from_mint"
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="@dimen/large_text_size"
+                                    android:textColor="@color/white"/>
+
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/brk_time_to_hour"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/brktme_to_txt"/>
+
+                                <TextView
+                                    android:layout_width="10dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:id="@+id/brktocolon1"
+                                    android:text=":"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:layout_toRightOf="@+id/brk_time_to_hour"/>
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/brk_time_to_mint"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/brktocolon1"/>
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp"
+                            android:layout_height="wrap_content">
+
+                            <Utils.RegularText
+                                android:layout_width="@dimen/add_new_store_textview_width"
+                                android:layout_height="wrap_content"
+                                android:text="Friday"
+                                android:id="@+id/fri_txt"
+                                android:textSize="@dimen/large_text_size"
+                                android:textColor="@color/white"/>
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <Utils.RegularText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Open"
+                                    android:gravity="left"
+                                    android:id="@+id/opentxt"
+                                    android:textSize="@dimen/large_text_size"
+                                    android:textColor="@color/white"/>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/fricheckboxlayout"
+                                    android:layout_below="@+id/opentxt"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Yes"
+                                        android:textColor="@color/white"
+                                        android:padding="10dp"
+                                        android:id="@+id/fricheckbox1"/>
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="10dp"
+                                        android:textColor="@color/white"
+                                        android:text="No"
+                                        android:id="@+id/fricheckbox2"/>
+
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/fricheckboxlayout"
+                                    android:id="@+id/fri_yes_layout"
+                                    android:visibility="gone"
+                                    android:layout_weight="1">
+                                    <Utils.RegularText
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Available 24 x 7"
+                                        android:gravity="left"
+                                        android:id="@+id/friavailabletxt"
+                                        android:textSize="@dimen/large_text_size"
+                                        android:textColor="@color/white"/>
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/friavailabletxt"
+                                        android:id="@+id/fri_yes_checkboxlayout"
+                                        android:orientation="horizontal">
+
+                                        <CheckBox
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="Yes"
+                                            android:textColor="@color/white"
+                                            android:padding="10dp"
+                                            android:id="@+id/fri_yes_checkbox1"/>
+
+                                        <CheckBox
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:padding="10dp"
+                                            android:textColor="@color/white"
+                                            android:text="No"
+                                            android:id="@+id/fri_yes_checkbox2"/>
+
+                                    </LinearLayout>
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/fri_yes_storetiming"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content">
+
+                            <Utils.RegularText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Store Timing"
+                                android:gravity="center"
+                                android:id="@+id/fri_nostoretiming"
+                                android:textSize="@dimen/large_text_size"
+                                android:textColor="@color/white"/>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_height="wrap_content">
+                                <Utils.RegularText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Open time"
+                                    android:gravity="left"
+                                    android:id="@+id/fri_no_opentimetxt"
+                                    android:textSize="@dimen/large_text_size"
+                                    android:textColor="@color/white"/>
+
+                                <Utils.RegularText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="From: "
+                                    android:gravity="left"
+                                    android:id="@+id/fri_noopenfrom"
+                                    android:layout_toRightOf="@+id/fri_no_opentimetxt"
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="@dimen/large_text_size"
+                                    android:textColor="@color/white"/>
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/fri_no_open_time_from_hour"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/fri_noopenfrom"/>
+
+                                <TextView
+                                    android:layout_width="10dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="6dp"
+                                    android:id="@+id/fri_no_openfromcolon1"
+                                    android:text=":"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:layout_toRightOf="@+id/fri_no_open_time_from_hour"/>
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/fri_no_open_time_from_mint"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/fri_no_openfromcolon1"/>
+
+                                <Utils.RegularText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="To: "
+                                    android:gravity="left"
+                                    android:id="@+id/fri_no_opentme_to_txt"
+                                    android:layout_toRightOf="@+id/fri_no_open_time_from_mint"
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="@dimen/large_text_size"
+                                    android:textColor="@color/white"/>
+
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/fri_no_open_time_to_hour"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/fri_no_opentme_to_txt"/>
+
+                                <TextView
+                                    android:layout_width="10dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:id="@+id/fri_no_opentocolon1"
+                                    android:text=":"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:layout_toRightOf="@+id/fri_no_open_time_to_hour"/>
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/fri_no_open_time_to_mint"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/fri_no_opentocolon1"/>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_vertical"
+                                android:layout_height="wrap_content">
+                                <Utils.RegularText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Break time"
+                                    android:gravity="left"
+                                    android:id="@+id/fri_no_breaktimetxt"
+                                    android:textSize="@dimen/large_text_size"
+                                    android:textColor="@color/white"/>
+
+                                <Utils.RegularText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="From: "
+                                    android:gravity="left"
+                                    android:id="@+id/frino_breakform"
+                                    android:layout_toRightOf="@+id/fri_no_breaktimetxt"
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="@dimen/large_text_size"
+                                    android:textColor="@color/white"/>
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/fri_no_brk_time_from_hour"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/frino_breakform"/>
+
+                                <TextView
+                                    android:layout_width="10dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:id="@+id/fri_no_brkfromcolon1"
+                                    android:text=":"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:layout_toRightOf="@+id/fri_no_brk_time_from_hour"/>
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/fri_no_brk_time_from_mint"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/fri_no_brkfromcolon1"/>
+
+                                <Utils.RegularText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="To: "
+                                    android:gravity="left"
+                                    android:id="@+id/fri_no_brktme_to_txt"
+                                    android:layout_toRightOf="@+id/fri_no_brk_time_from_mint"
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="@dimen/large_text_size"
+                                    android:textColor="@color/white"/>
+
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/fri_no_brk_time_to_hour"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/fri_no_brktme_to_txt"/>
+
+                                <TextView
+                                    android:layout_width="10dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:id="@+id/fri_no_brktocolon1"
+                                    android:text=":"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:layout_toRightOf="@+id/fri_no_brk_time_to_hour"/>
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/fri_no_brk_time_to_mint"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/fri_no_brktocolon1"/>
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp"
+                            android:layout_height="wrap_content">
+
+                            <Utils.RegularText
+                                android:layout_width="@dimen/add_new_store_textview_width"
+                                android:layout_height="wrap_content"
+                                android:text="Saturday"
+                                android:id="@+id/sat_txt"
+                                android:textSize="@dimen/large_text_size"
+                                android:textColor="@color/white"/>
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <Utils.RegularText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Open"
+                                    android:gravity="left"
+                                    android:id="@+id/satopentxt"
+                                    android:textSize="@dimen/large_text_size"
+                                    android:textColor="@color/white"/>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/satcheckboxlayout"
+                                    android:layout_below="@+id/satopentxt"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Yes"
+                                        android:textColor="@color/white"
+                                        android:padding="10dp"
+                                        android:id="@+id/satcheckbox1"/>
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="10dp"
+                                        android:textColor="@color/white"
+                                        android:text="No"
+                                        android:id="@+id/satcheckbox2"/>
+
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/satcheckboxlayout"
+                                    android:id="@+id/sat_yes_layout"
+                                    android:visibility="gone"
+                                    android:layout_weight="1">
+                                    <Utils.RegularText
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Available 24 x 7"
+                                        android:gravity="left"
+                                        android:id="@+id/satavailabletxt"
+                                        android:textSize="@dimen/large_text_size"
+                                        android:textColor="@color/white"/>
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/satavailabletxt"
+                                        android:id="@+id/sat_yes_checkboxlayout"
+                                        android:orientation="horizontal">
+
+                                        <CheckBox
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="Yes"
+                                            android:padding="10dp"
+                                            android:textColor="@color/white"
+                                            android:id="@+id/sat_yes_checkbox1"/>
+
+                                        <CheckBox
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:padding="10dp"
+                                            android:textColor="@color/white"
+                                            android:text="No"
+                                            android:id="@+id/sat_no_checkbox2"/>
+
+                                    </LinearLayout>
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/sat_yes_storetiming"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content">
+
+                            <Utils.RegularText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Store Timing"
+                                android:gravity="center"
+                                android:id="@+id/sat_nostoretiming"
+                                android:textSize="@dimen/large_text_size"
+                                android:textColor="@color/white"/>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_height="wrap_content">
+                                <Utils.RegularText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Open time"
+                                    android:gravity="left"
+                                    android:id="@+id/sat_no_opentimetxt"
+                                    android:textSize="@dimen/large_text_size"
+                                    android:textColor="@color/white"/>
+
+                                <Utils.RegularText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="From: "
+                                    android:gravity="left"
+                                    android:id="@+id/sat_noopenfrom"
+                                    android:layout_toRightOf="@+id/sat_no_opentimetxt"
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="@dimen/large_text_size"
+                                    android:textColor="@color/white"/>
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/sat_no_open_time_from_hour"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/sat_noopenfrom"/>
+
+                                <TextView
+                                    android:layout_width="10dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="6dp"
+                                    android:id="@+id/sat_no_openfromcolon1"
+                                    android:text=":"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:layout_toRightOf="@+id/sat_no_open_time_from_hour"/>
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/sat_no_open_time_from_mint"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/sat_no_openfromcolon1"/>
+
+                                <Utils.RegularText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="To: "
+                                    android:gravity="left"
+                                    android:id="@+id/sat_no_opentme_to_txt"
+                                    android:layout_toRightOf="@+id/sat_no_open_time_from_mint"
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="@dimen/large_text_size"
+                                    android:textColor="@color/white"/>
+
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/sat_no_open_time_to_hour"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/sat_no_opentme_to_txt"/>
+
+                                <TextView
+                                    android:layout_width="10dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:id="@+id/sat_no_opentocolon1"
+                                    android:text=":"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:layout_toRightOf="@+id/sat_no_open_time_to_hour"/>
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/sat_no_open_time_to_mint"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/sat_no_opentocolon1"/>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_vertical"
+                                android:layout_height="wrap_content">
+                                <Utils.RegularText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Break time"
+                                    android:gravity="left"
+                                    android:id="@+id/sat_no_breaktimetxt"
+                                    android:textSize="@dimen/large_text_size"
+                                    android:textColor="@color/white"/>
+
+                                <Utils.RegularText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="From: "
+                                    android:gravity="left"
+                                    android:id="@+id/sat_no_breakform"
+                                    android:layout_toRightOf="@+id/sat_no_breaktimetxt"
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="@dimen/large_text_size"
+                                    android:textColor="@color/white"/>
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/sat_no_brk_time_from_hour"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/sat_no_breakform"/>
+
+                                <TextView
+                                    android:layout_width="10dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:id="@+id/sat_no_brkfromcolon1"
+                                    android:text=":"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:layout_toRightOf="@+id/sat_no_brk_time_from_hour"/>
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/sat_no_brk_time_from_mint"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/sat_no_brkfromcolon1"/>
+
+                                <Utils.RegularText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="To: "
+                                    android:gravity="left"
+                                    android:id="@+id/sat_no_brktme_to_txt"
+                                    android:layout_toRightOf="@+id/sat_no_brk_time_from_mint"
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="@dimen/large_text_size"
+                                    android:textColor="@color/white"/>
+
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/sat_no_brk_time_to_hour"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/sat_no_brktme_to_txt"/>
+
+                                <TextView
+                                    android:layout_width="10dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:id="@+id/sat_no_brktocolon1"
+                                    android:text=":"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:layout_toRightOf="@+id/sat_no_brk_time_to_hour"/>
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:hint=""
+                                    android:id="@+id/sat_no_brk_time_to_mint"
+                                    android:gravity="center"
+                                    android:background="@drawable/strip"
+                                    android:layout_toRightOf="@+id/sat_no_brktocolon1"/>
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                       <LinearLayout
+                           android:layout_marginTop="@dimen/add_new_company_margin_top"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal">
+
+                           <Utils.RegularText
+                               android:layout_width="@dimen/add_new_store_textview_width"
+                               android:layout_height="wrap_content"
+                               android:text="Delivery"
+                               android:textSize="@dimen/large_text_size"
+                               android:textColor="@color/white"/>
+                           <LinearLayout
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_below="@+id/friavailabletxt"
+                               android:id="@+id/deleviry_checkboxlayout"
+                               android:orientation="horizontal">
+
+                               <CheckBox
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:layout_weight="1"
+                                   android:text="Yes"
+                                   android:textColor="@color/white"
+                                   android:padding="10dp"
+                                   android:id="@+id/delevity_checkbox1"/>
+
+                               <CheckBox
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:layout_weight="1"
+                                   android:padding="10dp"
+                                   android:textColor="@color/white"
+                                   android:text="No"
+                                   android:id="@+id/delevity_checkbox2"/>
+
+                       </LinearLayout>
+
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:layout_marginTop="@dimen/add_new_company_margin_top"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal">
+
+                           <Utils.RegularText
+                               android:layout_width="@dimen/add_new_store_textview_width"
+                               android:layout_height="wrap_content"
+                               android:text="Currency accepeted"
+                               android:textSize="@dimen/large_text_size"
+                               android:textColor="@color/white"/>
+                           <Utils.RegularText
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:visibility="visible"
+                               android:padding="5dp"
+                               android:hint="Selected"
+                               android:background="@color/white"
+                               android:id="@+id/currency_accepted_edt"/>
+
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:layout_marginTop="@dimen/add_new_company_margin_top"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:gravity="center|left"
+                           android:orientation="horizontal">
+
+                           <Utils.RegularText
+                               android:layout_width="@dimen/add_new_store_textview_width"
+                               android:layout_height="wrap_content"
+                               android:text="Credit card facility"
+                               android:textSize="@dimen/large_text_size"
+                               android:textColor="@color/white"/>
+
+                           <LinearLayout
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_below="@+id/friavailabletxt"
+                               android:id="@+id/credit_card_checkboxlayout"
+                               android:orientation="horizontal">
+
+                               <CheckBox
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:layout_weight="1"
+                                   android:text="Yes"
+                                   android:textColor="@color/white"
+                                   android:padding="10dp"
+                                   android:id="@+id/c_card_checkbox1"/>
+
+                               <CheckBox
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:layout_weight="1"
+                                   android:textColor="@color/white"
+                                   android:padding="10dp"
+                                   android:text="No"
+                                   android:id="@+id/c_card_checkbox2"/>
+
+                           </LinearLayout>
+
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:layout_marginTop="@dimen/add_new_company_margin_top"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal">
+
+                           <Utils.RegularText
+                               android:layout_width="@dimen/add_new_store_textview_width"
+                               android:layout_height="wrap_content"
+                               android:text="Sponsered"
+                               android:textSize="@dimen/large_text_size"
+                               android:textColor="@color/white"/>
+                           <LinearLayout
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_below="@+id/friavailabletxt"
+                               android:id="@+id/sponsered_checkboxlayout"
+                               android:orientation="horizontal">
+
+                               <CheckBox
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:layout_weight="1"
+                                   android:text="Yes"
+                                   android:textColor="@color/white"
+                                   android:padding="10dp"
+                                   android:id="@+id/sponsered_checkbox1"/>
+
+                               <CheckBox
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:layout_weight="1"
+                                   android:padding="10dp"
+                                   android:textColor="@color/white"
+                                   android:text="No"
+                                   android:id="@+id/sponsered_checkbox2"/>
+
+                           </LinearLayout>
+
+                       </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Utils.RegularText
+                            android:layout_width="@dimen/add_new_store_textview_width"
+                            android:layout_height="wrap_content"
+                            android:text="Tags"
+                            android:textSize="@dimen/large_text_size"
+                            android:textColor="@color/white"/>
+                        <EditText
+                            android:id="@+id/edt_tags"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/strip"
+                            android:hint=""
+                            android:textSize="@dimen/large_text_size"
+                            android:paddingLeft="@dimen/half_margin_plus"
+                            android:textColor="@color/grey"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Utils.RegularText
+                            android:layout_width="@dimen/add_new_store_textview_width"
+                            android:layout_height="wrap_content"
+                            android:text="Banner (Header)"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="@dimen/large_text_size"
+                            android:textColor="@color/white"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:scaleType="fitXY"
+                                android:background="@drawable/placeholder"
+                                android:id="@+id/banner_img_view"/>
+                            <Utils.RegularText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="(Upto 2 MB Size should be minimum- 1200x400)"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Utils.RegularText
+                            android:layout_width="@dimen/add_new_store_textview_width"
+                            android:layout_height="wrap_content"
+                            android:text="Upload images (Gallery)"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="@dimen/large_text_size"
+                            android:textColor="@color/white"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <HorizontalScrollView
+                                android:id="@+id/horizontalScrollView1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:id="@+id/shapeLayout"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginTop="10dp" >
+                                    <ImageView
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp"
+                                        android:scaleType="fitXY"
+                                        android:layout_marginRight="1dp"
+                                        android:src="@drawable/placeholder"
+                                        android:id="@+id/upload_img_view1"/>
+                                    <ImageView
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp"
+                                        android:scaleType="fitXY"
+                                        android:visibility="gone"
+                                        android:src="@drawable/placeholder"
+                                        android:id="@+id/upload_img_view2"/>
+                                    <ImageView
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp"
+                                        android:scaleType="fitXY"
+                                        android:visibility="gone"
+                                        android:src="@drawable/placeholder"
+                                        android:id="@+id/upload_img_view3"/>
+                                    <ImageView
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp"
+                                        android:scaleType="fitXY"
+                                        android:visibility="gone"
+                                        android:src="@drawable/placeholder"
+                                        android:id="@+id/upload_img_view4"/>
+                                    <ImageView
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp"
+                                        android:scaleType="fitXY"
+                                        android:visibility="gone"
+                                        android:src="@drawable/placeholder"
+                                        android:id="@+id/upload_img_view5"/>
+                                </LinearLayout>
+
+                            </HorizontalScrollView>
+
+                            <Utils.RegularText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="(Upto 2 MB Size should be minimum- 360x300)"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/extra_large_text_size"
+                    android:layout_marginBottom="@dimen/extra_large_text_size"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:layout_below="@+id/mainlayout"
+                    android:textAlignment="center"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/login_button"
+                    android:id="@+id/btn_save" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fab_bg"
+        app:elevation="0dp"
+        app:backgroundTint="@color/transparent"
+        android:id="@+id/fab"/>
+</RelativeLayout>

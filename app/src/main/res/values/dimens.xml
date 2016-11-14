@@ -1,0 +1,140 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="item_offset">8dp</dimen>
+    <dimen name="rating_height">16dip</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_relative_hieght">90dp</dimen>
+    <dimen name="padding_edit">10dp</dimen>
+    <dimen name="padding_button">10dp</dimen>
+    <dimen name="text_size_very_small">10sp</dimen>
+    <dimen name="text_size_small">13sp</dimen>
+    <dimen name="text_size_medium">15sp</dimen>
+    <dimen name="text_size_larg">18sp</dimen>
+    <dimen name="drawablePadding">5sp</dimen>
+    <dimen name="margin1">1dp</dimen>
+    <dimen name="margin2">2dp</dimen>
+    <dimen name="margin5">5dp</dimen>
+    <dimen name="margin_top5">5dp</dimen>
+    <dimen name="margin10">10dp</dimen>
+    <dimen name="margin11">11dp</dimen>
+    <dimen name="margin15">15dp</dimen>
+    <dimen name="margin20">20dp</dimen>
+    <dimen name="margin25">25dp</dimen>
+    <dimen name="margin30">30dp</dimen>
+    <dimen name="margin35">35dp</dimen>
+    <dimen name="margin40">40dp</dimen>
+    <dimen name="margin50">50dp</dimen>
+    <dimen name="margin_30">-30dp</dimen>
+    <dimen name="margin_25">-25dp</dimen>
+    <dimen name="padding3">3dp</dimen>
+    <dimen name="padding4">4dp</dimen>
+    <dimen name="padding5">5dp</dimen>
+    <dimen name="padding7">7dp</dimen>
+    <dimen name="padding10">10dp</dimen>
+    <dimen name="padding15">15dp</dimen>
+    <dimen name="padding20">20dp</dimen>
+    <dimen name="height3">3dp</dimen>
+    <dimen name="height43">43dp</dimen>
+    <dimen name="height10">10dp</dimen>
+    <dimen name="height45">45dp</dimen>
+    <dimen name="height50">50dp</dimen>
+    <dimen name="height60">60dp</dimen>
+    <dimen name="height70">70dp</dimen>
+    <dimen name="height100">100dp</dimen>
+    <dimen name="width110">110dp</dimen>
+    <dimen name="width120">120dp</dimen>
+    <dimen name="width130">130dp</dimen>
+    <dimen name="width500">500dp</dimen>
+    <dimen name="height140">140dp</dimen>
+    <dimen name="height150">150dp</dimen>
+    <dimen name="height160">160dp</dimen>
+    <dimen name="height200dp">200dp</dimen>
+    <dimen name="height220dp">220dp</dimen>
+    <dimen name="radius5">5dp</dimen>
+    <dimen name="bar_height">55dp</dimen>
+    <dimen name="viewpager_height">120dp</dimen>
+    <dimen name="height180">180dp</dimen>
+    <dimen name="horizontal_list_height">215dp</dimen>
+    <dimen name="horizontal_super_list_height">370dp</dimen>
+    <dimen name="supermarket_picture_height">80dp</dimen>
+    <dimen name="supermarket_picture_width">200dp</dimen>
+    <dimen name="supermarket_picture_height1">100dp</dimen>
+    <dimen name="supermarket_picture_width1">230dp</dimen>
+    <dimen name="width60">60dp</dimen>
+    <dimen name="width80">80dp</dimen>
+    <dimen name="width250">250dp</dimen>
+    <dimen name="width300">300dp</dimen>
+
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+
+
+    <dimen name="home_adapter_imag_height">100dp</dimen>
+    <!-- <dimen name="home_adapter_list_height">145dp</dimen>-->
+    <dimen name="categroies_list_item_height">90dp</dimen>
+    <dimen name="categroies_list_CircleImageView_height_width">75dp</dimen>
+    <dimen name="outletlistpage_txt_sub_name_txt_size">12sp</dimen>
+    <dimen name="outlet_page_hlist_view_height">120dp</dimen>
+    <dimen name="search_cat_horisontallistview_imag_width">300dp</dimen>
+    <dimen name="search_cat_horisontallistview_imag_height">100dp</dimen>
+    <bool name="isTablet">false</bool>
+    <bool name="isTablet600">false</bool>
+    <bool name="isphon_xx">false</bool>
+    <bool name="isphon_x">true</bool>
+
+    <dimen name="home_screen_youtlocation_textsize">12sp</dimen>
+    <dimen name="home_screen_fetching_textsize">17sp</dimen>
+
+    <dimen name="outletlistpage_listview_text_address_txt_size">13sp</dimen>
+    <dimen name="outletlistpage_sponser_txt_size">12sp</dimen>
+    <dimen name="outletlistpage_magrig_left">5dp</dimen>
+    <dimen name="outletdetail_call_text_size">12sp</dimen>
+
+    <dimen name="outletdetail_call_height">70dp</dimen>
+    <dimen name="outletdetail_call_imgsize">25dp</dimen>
+
+    <dimen name="outtlistpagele_tv_outlet_name_text_size">19sp</dimen>
+    <dimen name="outtlistpagele_tv_outlet_type_text_size">16sp</dimen>
+    <dimen name="outtlistpagele_opennow_text_size">14sp</dimen>
+    <dimen name="outtlistpagele_address_text_size">16sp</dimen>
+    <dimen name="outtlistpagele_filter_Textsize">18sp</dimen>
+    <dimen name="outtlistpagele_sponser_Textsize">14sp</dimen>
+
+    <dimen name="my_account_screen_username_text_size">16sp</dimen>
+    <dimen name="my_account_screen_username_bookmarkno_textsize">27sp</dimen>
+    <dimen name="my_account_screen_bookmark_textsize">18sp</dimen>
+
+    <dimen name="stattistics_screen_totalpnt_txt_size">19sp</dimen>
+    <dimen name="searchlistitem_rating_pading_left_right">6dp</dimen>
+    <dimen name="searchlistitem_rating_pading_top_bottom">1dp</dimen>
+    <dimen name="outletdetail_show_more_text_size">13sp</dimen>
+    <dimen name="btn_login_text_size">16sp</dimen>
+    <dimen name="tablayout_icons_hight_width">25dp</dimen>
+    <dimen name="tablayout_more_icons_width_">30dp</dimen>
+    <dimen name="tablayout_more_icons_hight_">10dp</dimen>
+    <dimen name="tablayout_icons_categories_hight">18dp</dimen>
+    <dimen name="tablayout_icons_categories_pading">3dp</dimen>
+    <dimen name="tablayout_icons_text_size">10sp</dimen>
+    <dimen name="subcategory_header_text_size">14dp</dimen>
+
+    <!--anil atri-->
+    <dimen name="login_activity_google_plus_padding_left">30dp</dimen>
+    <!--anil atri org dimen-->
+
+
+    <dimen name="login_activity_edittext_username_margin_left_right">30dp</dimen>
+    <dimen name="login_activity_edittext_username_margin_top">10dp</dimen>
+    <dimen name="login_activity_edittext_password_margin_top">15dp</dimen>
+    <dimen name="login_activity_login_button_margin_top">20dp</dimen>
+    <dimen name="login_activity_login_button_margin_left_right">30dp</dimen>
+    <dimen name="login_activity_login_button_hight">50dp</dimen>
+
+    <!--add new store textview width-->
+    <dimen name="add_new_store_textview_width">130dp</dimen>
+
+
+</resources>

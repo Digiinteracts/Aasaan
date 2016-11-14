@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/more_bg_color"
+    android:orientation="vertical"
+    tools:context="com.assan.MoreScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/toolbarlayout"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow"
+            android:padding="15dp"
+            android:id="@+id/backicn"/>
+
+        <Utils.RegularText
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/black_light"
+            android:layout_height="wrap_content"
+            android:text="More"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/search"
+            android:padding="15dp"
+            android:gravity="right"
+
+            android:src="@drawable/search"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_above="@+id/rl_foorte"
+        android:layout_below="@+id/toolbarlayout"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/more_screen_layout_padding_right"
+        android:paddingRight="@dimen/more_screen_layout_padding_right"
+        android:paddingTop="@dimen/more_screen_layout_padding_top_bottom"
+        android:paddingBottom="@dimen/more_screen_layout_padding_top_bottom"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        android:id="@+id/listyourstore_layout"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <Utils.LightText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listyourstore"
+            android:layout_weight="1"
+            android:textSize="@dimen/more_screen_list_text_size"
+            android:textColor="@color/more_screen_txt_color"
+            android:text="List your Store"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/more_screen_layout_padding_right"
+        android:paddingRight="@dimen/more_screen_layout_padding_right"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_marginBottom="1dp"
+        android:id="@+id/aboutassan_layout"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <Utils.LightText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/more_screen_list_text_size"
+            android:textColor="@color/more_screen_txt_color"
+            android:text="About Aassaan"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/more_screen_layout_padding_right"
+        android:paddingRight="@dimen/more_screen_layout_padding_right"
+        android:paddingTop="@dimen/more_screen_layout_padding_top_bottom"
+        android:paddingBottom="@dimen/more_screen_layout_padding_top_bottom"
+        android:layout_marginBottom="1dp"
+        android:id="@+id/rate_assan_layout"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <Utils.LightText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/more_screen_txt_color"
+            android:layout_weight="1"
+            android:textSize="@dimen/more_screen_list_text_size"
+            android:text="Play Store"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/more_screen_layout_padding_right"
+        android:paddingRight="@dimen/more_screen_layout_padding_right"
+        android:paddingTop="@dimen/more_screen_layout_padding_top_bottom"
+        android:paddingBottom="@dimen/more_screen_layout_padding_top_bottom"
+        android:layout_marginBottom="1dp"
+        android:id="@+id/follow_fb_layout"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <Utils.LightText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/more_screen_list_text_size"
+            android:textColor="@color/more_screen_txt_color"
+            android:text="Follow us on Facebook"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/more_screen_layout_padding_right"
+        android:paddingRight="@dimen/more_screen_layout_padding_right"
+        android:paddingTop="@dimen/more_screen_layout_padding_top_bottom"
+        android:paddingBottom="@dimen/more_screen_layout_padding_top_bottom"
+        android:layout_marginBottom="1dp"
+        android:id="@+id/follow_instagram_layout"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <Utils.LightText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/more_screen_txt_color"
+            android:layout_weight="1"
+            android:textSize="@dimen/more_screen_list_text_size"
+            android:text="Follow us on Instagram"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/more_screen_layout_padding_right"
+        android:paddingRight="@dimen/more_screen_layout_padding_right"
+        android:paddingTop="@dimen/more_screen_layout_padding_top_bottom"
+        android:paddingBottom="@dimen/more_screen_layout_padding_top_bottom"
+        android:layout_marginBottom="1dp"
+        android:id="@+id/follow_twtter_layout"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <Utils.LightText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/more_screen_list_text_size"
+            android:textColor="@color/more_screen_txt_color"
+            android:text="Follow us on Twitter"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/more_screen_layout_padding_right"
+        android:paddingRight="@dimen/more_screen_layout_padding_right"
+        android:paddingTop="@dimen/more_screen_layout_padding_top_bottom"
+        android:paddingBottom="@dimen/more_screen_layout_padding_top_bottom"
+        android:layout_marginBottom="7dp"
+        android:layout_marginTop="7dp"
+        android:id="@+id/contactus_layout"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <Utils.LightText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/more_screen_txt_color"
+            android:layout_weight="1"
+            android:textSize="@dimen/more_screen_list_text_size"
+            android:text="Contact Us"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/more_screen_layout_padding_right"
+        android:paddingRight="@dimen/more_screen_layout_padding_right"
+        android:paddingTop="@dimen/more_screen_layout_padding_top_bottom"
+        android:paddingBottom="@dimen/more_screen_layout_padding_top_bottom"
+        android:layout_marginBottom="1dp"
+        android:id="@+id/privacypolicy_layout"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <Utils.LightText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/more_screen_list_text_size"
+            android:textColor="@color/more_screen_txt_color"
+            android:text="Privacy Policy"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/more_screen_layout_padding_right"
+        android:paddingRight="@dimen/more_screen_layout_padding_right"
+        android:paddingTop="@dimen/more_screen_layout_padding_top_bottom"
+        android:paddingBottom="@dimen/more_screen_layout_padding_top_bottom"
+        android:layout_marginBottom="1dp"
+        android:id="@+id/tert_of_licanee_layout"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <Utils.LightText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/more_screen_list_text_size"
+            android:textColor="@color/more_screen_txt_color"
+            android:text="Terms of License and Use"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow"/>
+
+    </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_foorte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f1f1f1"
+            android:weightSum="1.0"
+            android:paddingBottom="3dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/ll_home"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_marginTop="@dimen/half_margin"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_home"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/home_icon"/>
+                <ImageView
+                    android:id="@+id/btn_home_active"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/home_icon_activer"/>
+                <Utils.LightText
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:textColor="@color/more_screen_txt_color"
+                    android:id="@+id/txt_home"
+                    android:layout_gravity="center"
+                    android:text="@string/home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_categorie"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/small_text_size"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_cat"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_categories_hight"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/categories_icon"/>
+                <ImageView
+                    android:id="@+id/btn_cat_active"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_categories_hight"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/categories_icon_active"/>
+                <Utils.LightText
+                    android:layout_marginTop="@dimen/tablayout_icons_categories_pading"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:id="@+id/txt_category"
+                    android:layout_gravity="center"
+                    android:text="@string/category"
+                    android:textColor="@color/more_screen_txt_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_bookmark"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/half_margin"
+
+                android:layout_marginLeft="@dimen/small_text_size"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_bookmark"
+                    android:layout_width="@dimen/tablayout_bookmark_icons_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/bookmark_icon"/>
+
+                <ImageView
+                    android:id="@+id/btn_bookmark_active"
+                    android:layout_width="@dimen/tablayout_bookmark_icons_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone"
+                    android:background="@drawable/bookmark_icon_active"/>
+                <Utils.LightText
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:id="@+id/txt_bookmark"
+                    android:layout_gravity="center"
+                    android:text="@string/bookmark"
+                    android:textColor="@color/more_screen_txt_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_account"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/half_margin"
+
+                android:layout_marginLeft="@dimen/small_text_size"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_account"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:paddingRight="@dimen/half_margin"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/account_icon"/>
+
+                <ImageView
+                    android:id="@+id/btn_account_active"
+                    android:layout_width="@dimen/tablayout_icons_hight_width"
+                    android:layout_height="@dimen/tablayout_icons_hight_width"
+                    android:paddingRight="@dimen/half_margin"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/account_icon_active"/>
+                <Utils.LightText
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:id="@+id/txt_account"
+                    android:layout_gravity="center"
+                    android:textColor="@color/more_screen_txt_color"
+                    android:text="@string/accounts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_recent"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/half_margin"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/small_text_size"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btn_recent"
+                    android:visibility="gone"
+                    android:layout_width="@dimen/tablayout_more_icons_width_"
+                    android:layout_height="@dimen/tablayout_more_icons_hight_"
+                    android:paddingRight="@dimen/half_margin"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/recent_icon"/>
+
+                <ImageView
+                    android:id="@+id/btn_recent_active"
+                    android:layout_width="@dimen/tablayout_more_icons_width_"
+                    android:layout_height="@dimen/tablayout_more_icons_hight_"
+                    android:paddingRight="@dimen/half_margin"
+                    android:visibility="visible"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/recent_icon_active"/>
+                <Utils.LightText
+                    android:textAllCaps="true"
+                    android:textColor="@color/lightred"
+                    android:textSize="@dimen/tablayout_icons_text_size"
+                    android:id="@+id/txt_recents"
+                    android:layout_gravity="center"
+                    android:text="@string/recents"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

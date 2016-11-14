@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin20"
+    android:layout_centerHorizontal="true"
+   >
+
+    <TextView
+        android:textColor="@color/black"
+        android:id="@+id/txtview_forgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_larg"
+        android:text="forgot Password"/>
+
+
+    <TextView
+        android:textColor="@color/black"
+        android:id="@+id/txtskip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/text_size_larg"
+       android:layout_marginRight="@dimen/margin1"
+        android:text="skip"/>
+
+    <Utils.RegularText
+        android:id="@+id/txtplease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+
+        android:text="We'll email you with a link to reset your password.Please enter the email address used to register with App and we'll contact you shortly."
+        android:textSize="@dimen/normal_text_size"
+        android:layout_margin="@dimen/large_text_size"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtskip"
+
+        />
+
+<LinearLayout
+    android:layout_below="@id/txtplease"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <EditText
+        android:layout_below="@id/txtplease"
+        android:id="@+id/txt_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/large_text_size"
+        android:layout_marginRight="@dimen/large_text_size"
+        android:drawableLeft="@drawable/email_1"
+        android:hint="your email address"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/strip"/>
+
+    <Button
+        android:layout_below="@id/txt_username"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/small_text_size"
+        android:text="Send"
+        android:textColor="#ffffff"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/login_button"
+        android:id="@+id/btn_login" />
+</LinearLayout>
+
+
+
+
+</RelativeLayout>

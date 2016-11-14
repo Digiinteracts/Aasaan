@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg">
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/large_text_size">
+
+                <Utils.Boldtext
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Company"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    android:textColor="@color/white"
+                    android:id="@+id/contactus"
+                    android:textSize="17sp"/>
+
+              <ImageView
+                    android:id="@+id/imageview_cross"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:textColor="#ffffff"
+                    android:textStyle="normal"
+                    android:background="@drawable/close_1"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <Utils.RoundedImageView
+                    android:id="@+id/iv_upload_VIEW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    android:background="@drawable/plus_1"
+                    android:layout_marginTop="@dimen/large_text_size"
+                    android:layout_below="@+id/imageview_cross"
+                    android:layout_centerHorizontal="true" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/mainlayout"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/iv_upload_VIEW"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                    android:id="@+id/ll_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_text_size"
+                    android:orientation="horizontal">
+
+                    <Utils.RegularText
+                        android:layout_width="@dimen/add_new_store_textview_width"
+                        android:layout_height="wrap_content"
+                        android:text="Company Name"
+                        android:textSize="@dimen/large_text_size"
+                        android:textColor="@color/white"/>
+
+                    <Utils.RegularText
+                        android:id="@+id/edt_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/strip"
+                        android:hint="Enter title"
+                        android:textColorHint="@color/text_gray_color"
+                        android:textSize="@dimen/large_text_size"
+                        android:paddingLeft="@dimen/half_margin_plus"
+                        android:gravity="center|left"
+                        android:textColor="@color/grey"
+                       />
+
+                </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:orientation="horizontal">
+
+                        <Utils.RegularText
+                            android:layout_width="@dimen/add_new_store_textview_width"
+                            android:layout_height="wrap_content"
+                            android:text="Email"
+                            android:textSize="@dimen/large_text_size"
+                            android:textColor="@color/white"/>
+                        <Utils.RegularText
+                            android:id="@+id/edt_email"
+                            android:gravity="center|left"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/strip"
+                            android:hint="Enter email"
+                            android:textColorHint="@color/text_gray_color"
+                            android:textSize="@dimen/large_text_size"
+                            android:paddingLeft="@dimen/half_margin_plus"
+                            android:textColor="@color/grey"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_noofstore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:orientation="horizontal">
+
+                        <Utils.RegularText
+                            android:layout_width="@dimen/add_new_store_textview_width"
+                            android:layout_height="wrap_content"
+                            android:text="No of stores"
+                            android:textSize="@dimen/large_text_size"
+                            android:textColor="@color/white"/>
+                        <EditText
+                            android:id="@+id/edt_noofstore"
+                            android:layout_width="match_parent"
+                            android:inputType="number"
+                            android:textColorHint="@color/text_gray_color"
+                            android:textSize="@dimen/large_text_size"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/strip"
+                            android:hint="Enter no of stores"
+                            android:paddingLeft="@dimen/half_margin_plus"
+                            android:textColor="@color/grey"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_buildingname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:orientation="horizontal">
+
+                        <Utils.RegularText
+                            android:layout_width="@dimen/add_new_store_textview_width"
+                            android:layout_height="wrap_content"
+                            android:text="Building name"
+                            android:textSize="@dimen/large_text_size"
+                            android:textColor="@color/white"/>
+                        <EditText
+                            android:id="@+id/edt_building_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/strip"
+                            android:textColorHint="@color/text_gray_color"
+                            android:textSize="@dimen/large_text_size"
+                            android:hint="Enter building name"
+                            android:paddingLeft="@dimen/half_margin_plus"
+                            android:textColor="@color/grey"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_street"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:orientation="horizontal">
+
+                        <Utils.RegularText
+                            android:layout_width="@dimen/add_new_store_textview_width"
+                            android:layout_height="wrap_content"
+                            android:text="Street"
+                            android:textSize="@dimen/large_text_size"
+                            android:textColor="@color/white"/>
+                        <EditText
+                            android:id="@+id/edt_street"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/strip"
+                            android:hint="Enter Street"
+                            android:textColorHint="@color/text_gray_color"
+                            android:textSize="@dimen/large_text_size"
+                            android:paddingLeft="@dimen/half_margin_plus"
+                            android:textColor="@color/grey"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:orientation="horizontal">
+
+                        <Utils.RegularText
+                            android:layout_width="@dimen/add_new_store_textview_width"
+                            android:layout_height="wrap_content"
+                            android:text="City"
+                            android:textSize="@dimen/large_text_size"
+                            android:textColor="@color/white"/>
+                     <!--   <EditText
+                            android:id="@+id/edt_city"
+                            android:layout_weight="1.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/strip"
+                            android:hint="Selection"
+                            android:paddingLeft="@dimen/half_margin_plus"
+                            android:textColor="@color/grey"
+                          />-->
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spinner_height"
+                            android:visibility="visible"
+                            android:prompt="@string/country_prompt"
+                            android:padding="5dp"
+                            android:entries="@array/country_arrays"
+                            android:theme="@style/countryspinner"
+                            android:background="@color/white"
+                            android:id="@+id/cityspinner"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:orientation="horizontal">
+
+                        <Utils.RegularText
+                            android:layout_width="@dimen/add_new_store_textview_width"
+                            android:layout_height="wrap_content"
+                            android:text="State"
+                            android:textSize="@dimen/large_text_size"
+                            android:textColor="@color/white"/>
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spinner_height"
+                            android:padding="5dp"
+                            android:visibility="visible"
+                            android:prompt="@string/country_prompt"
+                            android:entries="@array/country_arrays"
+                            android:theme="@style/countryspinner"
+                            android:background="@color/white"
+                            android:id="@+id/statespinner"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_landmark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:orientation="horizontal">
+
+                        <Utils.RegularText
+                            android:layout_width="@dimen/add_new_store_textview_width"
+                            android:layout_height="wrap_content"
+                            android:text="Landmark"
+                            android:textSize="@dimen/large_text_size"
+                            android:textColor="@color/white"/>
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spinner_height"
+                            android:padding="5dp"
+                            android:visibility="visible"
+                            android:theme="@style/countryspinner"
+                            android:prompt="@string/country_prompt"
+                            android:entries="@array/country_arrays"
+                            android:background="@color/white"
+                            android:id="@+id/landmarkspinner"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:orientation="horizontal">
+
+                        <Utils.RegularText
+                            android:layout_width="@dimen/add_new_store_textview_width"
+                            android:layout_height="wrap_content"
+                            android:text="P.O Box"
+                            android:textSize="@dimen/large_text_size"
+                            android:textColor="@color/white"/>
+                        <EditText
+                            android:id="@+id/edt_pobox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/strip"
+                            android:hint="Enter P.O Box"
+                            android:textColorHint="@color/text_gray_color"
+                            android:textSize="@dimen/large_text_size"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/half_margin_plus"
+                            android:textColor="@color/grey"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Utils.RegularText
+                            android:layout_width="@dimen/add_new_store_textview_width"
+                            android:layout_height="wrap_content"
+                            android:text="Contact person"
+                            android:textSize="@dimen/large_text_size"
+                            android:textColor="@color/white"/>
+
+                        <Utils.RegularText
+                            android:id="@+id/edt_cperson"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/strip"
+                            android:hint="Enter Contact person"
+                            android:textColorHint="@color/text_gray_color"
+                            android:textSize="@dimen/large_text_size"
+                            android:paddingLeft="@dimen/half_margin_plus"
+                            android:inputType="number"
+                            android:gravity="center|left"
+                            android:textColor="@color/grey"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Utils.RegularText
+                            android:layout_width="@dimen/add_new_store_textview_width"
+                            android:layout_height="wrap_content"
+                            android:text="Enter Personal no"
+                            android:singleLine="true"
+                            android:textSize="@dimen/large_text_size"
+                            android:textColor="@color/white"/>
+                        <Utils.RegularText
+                            android:id="@+id/edt_personal_no"
+                            android:layout_width="match_parent"
+                            android:inputType="number"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/strip"
+                            android:gravity="center|left"
+                            android:hint="Enter Personal no"
+                            android:textColorHint="@color/text_gray_color"
+                            android:textSize="@dimen/large_text_size"
+                            android:paddingLeft="@dimen/half_margin_plus"
+                            android:textColor="@color/grey"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Utils.RegularText
+                            android:layout_width="@dimen/add_new_store_textview_width"
+                            android:layout_height="wrap_content"
+                            android:text="Phone No."
+                            android:textSize="@dimen/large_text_size"
+                            android:textColor="@color/white"/>
+                        <EditText
+                            android:id="@+id/edt_phonno"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:background="@drawable/strip"
+                            android:hint="Enter Phone No"
+                            android:textColorHint="@color/text_gray_color"
+                            android:textSize="@dimen/large_text_size"
+                            android:paddingLeft="@dimen/half_margin_plus"
+                            android:textColor="@color/grey"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Utils.RegularText
+                            android:layout_width="@dimen/add_new_store_textview_width"
+                            android:layout_height="wrap_content"
+                            android:text="Phone No.2"
+                            android:textSize="@dimen/large_text_size"
+                            android:textColor="@color/white"/>
+                        <EditText
+                            android:id="@+id/edt_phonno2"
+                            android:inputType="number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/strip"
+                            android:hint="Enter Phone No.2"
+                            android:textColorHint="@color/text_gray_color"
+                            android:textSize="@dimen/large_text_size"
+                            android:paddingLeft="@dimen/half_margin_plus"
+                            android:textColor="@color/grey"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Utils.RegularText
+                            android:layout_width="@dimen/add_new_store_textview_width"
+                            android:layout_height="wrap_content"
+                            android:text="Fax"
+                            android:textSize="@dimen/large_text_size"
+                            android:textColor="@color/white"/>
+                        <EditText
+                            android:id="@+id/edt_fax"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/strip"
+                            android:hint="Enter Fax"
+                            android:textColorHint="@color/text_gray_color"
+                            android:textSize="@dimen/large_text_size"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/half_margin_plus"
+                            android:textColor="@color/grey"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Utils.RegularText
+                            android:layout_width="@dimen/add_new_store_textview_width"
+                            android:layout_height="wrap_content"
+                            android:text="Website"
+                            android:textSize="@dimen/large_text_size"
+                            android:textColor="@color/white"/>
+                        <EditText
+                            android:id="@+id/edt_website"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/strip"
+                            android:hint="Enter Website"
+                            android:textColorHint="@color/text_gray_color"
+                            android:textSize="@dimen/large_text_size"
+                            android:paddingLeft="@dimen/half_margin_plus"
+                            android:textColor="@color/grey"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Utils.RegularText
+                            android:layout_width="@dimen/add_new_store_textview_width"
+                            android:layout_height="wrap_content"
+                            android:text="Licence type"
+                            android:textSize="@dimen/large_text_size"
+                            android:textColor="@color/white"/>
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spinner_height"
+                            android:visibility="visible"
+                            android:padding="2dp"
+                            android:prompt="@string/country_prompt"
+                            android:entries="@array/country_arrays"
+                            android:theme="@style/countryspinner"
+                            android:background="@color/white"
+                            android:id="@+id/licencespinner"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/add_new_company_margin_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Utils.RegularText
+                            android:layout_width="@dimen/add_new_store_textview_width"
+                            android:layout_height="wrap_content"
+                            android:text="Licence No"
+                            android:textSize="@dimen/large_text_size"
+                            android:textColor="@color/white"/>
+                        <EditText
+                            android:id="@+id/edt_licenceno"
+                            android:layout_width="match_parent"
+                            android:inputType="number"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/text_gray_color"
+                            android:textSize="@dimen/large_text_size"
+                            android:background="@drawable/strip"
+                            android:hint="Enter Licence No"
+                            android:paddingLeft="@dimen/half_margin_plus"
+                            android:textColor="@color/grey"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/extra_large_text_size"
+                    android:layout_marginBottom="@dimen/extra_large_text_size"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:layout_below="@+id/mainlayout"
+                    android:textAlignment="center"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/login_button"
+                    android:id="@+id/btn_save" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
